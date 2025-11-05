@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Optinal, Tuple
 from src.utils.logger import default_logger as logger
 from config.config import Config
+from sklearn.preprocessing import train_test_split
 
 class DataLoader:
     def __init__(self,data_path : Optinal[Path]=None) :
@@ -14,9 +15,16 @@ class DataLoader:
         try : 
             logger.info("Loading data from csv")
             df = pd.read_csv(Config.DATA_PATH)
+           
+            logger.info(f"Data Successfully Load")
             
-            
-            #delete value outlier
+            return df   
+        except Exception as e:
+            logger.error(f"Error Feature Engineering : {e}")
+            raise
+    
+    def validate_data(self,df:pd.DataFrame) -> pd.DataFrame:
+        #delete value outlier
             df.drop(Config.DROP_VALUE_PRICE, inplace=True)  # PRICE outliers
             df.drop(Config.DROP_VALUE_BEDS, inplace=True)  # BEDS outliers
             df.drop(Config.DROP_VALUE_PROPERTYSQFT, inplace=True)  # PROPERTYSQFT outliers
@@ -40,13 +48,18 @@ class DataLoader:
             df[Config.PROPERTYSQFT] = df[Config.PROPERTYSQFT].astype(int)
             
             logger.info(f"Change type int columns BATH and PROPERTYSQFT ")
+    
+    def split_features_target(self, df:pd.DataFrame) -> Tuple[pd.DataFrame, pd.Series]:
+        try : 
+            logger.info("Splitting Features and Target")
+            X = df.drop(Config.TARGET_COLUMN,axis=1)
+            y = np.log(df[Config.TARGET_COLUMN])
             
-        
-            X_train, X_test, y_train, y_test = dataset_preparation(df)
-            logger.info(f"Data Preparations and Feature Engineering Successfully")
+            logger.info(f"Split Completedd. Features shape : {X.shape}, Target Shape : {y.shape}")
             
+            return X,y
             
-            return X_train, X_test, y_train, y_test       
         except Exception as e:
-            logger.error(f"Error Feature Engineering : {e}")
-            raise
+            logger.error(f"Error Split Features : {e}")
+        
+        
