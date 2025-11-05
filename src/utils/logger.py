@@ -31,5 +31,12 @@ class CustomLogger:
             file_handler.setFormatter(formatter)
             logger.addHandler(file_handler)
         
-        return logger 
+        return logger
+
+# create default logger 
+default_logger = CustomLogger.setup_logger(
+    'new_york_house_price',
+    log_file='logs/new_york_house_price.log'
+    
+) 
             
