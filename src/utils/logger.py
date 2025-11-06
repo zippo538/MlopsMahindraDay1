@@ -21,7 +21,13 @@ class CustomLogger:
         #create file handler
         if log_file:
             log_path = Path(log_file)
-            log_path.mkdir(parents=True,exist_ok=True)
+            
+            #tentukan path direktori
+            log_dir = log_path.parent
+            
+            # jika tidak ada maka buat folder logs
+            log_dir.mkdir(parents=True,exist_ok=True)
+            
             file_handler = logging.handlers.TimedRotatingFileHandler(
                 log_file,
                 when='midnight',

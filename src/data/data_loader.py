@@ -1,20 +1,19 @@
 import pandas as pd
 import numpy as np
 from pathlib import Path
-from typing import Optinal, Tuple
+from typing import Optional, Tuple
 from src.utils.logger import default_logger as logger
-from config.config import Config
-from sklearn.preprocessing import train_test_split
+from src.utils.config import config
 
 class DataLoader:
-    def __init__(self,data_path : Optinal[Path]=None) :
+    def __init__(self,data_path : Optional[Path]=None) :
         self.data_path = data_path if data_path is not None else Path.cwd() / 'data' / 'NY-House_dataset.csv'
         logger.info(f"Initialized Dataloader with path : {self.data_path}")
     
     def load_data(self) -> pd.DataFrame :
         try : 
             logger.info("Loading data from csv")
-            df = pd.read_csv(Config.DATA_PATH)
+            df = pd.read_csv(config.get('DATA_PATH'))
            
             logger.info(f"Data Successfully Load")
             
@@ -23,18 +22,21 @@ class DataLoader:
             logger.error(f"Error Feature Engineering : {e}")
             raise
     
-    def validate_data(self,df:pd.DataFrame) -> pd.DataFrame:
-        #delete value outlier
-            df.drop(Config.DROP_VALUE_PRICE, inplace=True)  # PRICE outliers
-            df.drop(Config.DROP_VALUE_BEDS, inplace=True)  # BEDS outliers
-            df.drop(Config.DROP_VALUE_PROPERTYSQFT, inplace=True)  # PROPERTYSQFT outliers
+    def validate_data(self,df:pd.DataFrame) -> True:
+        try : 
+            logger.info(f"Validate Data ")
+            data_cleaning = config.get('data_cleaning')
+            #delete value outlier
+            df.drop(data_cleaning.get('DROP_VALUE_PRICE'), inplace=True)  # PRICE outliers
+            df.drop(data_cleaning.get('DROP_VALUE_BEDS'), inplace=True)  # BEDS outliers
+            df.drop(data_cleaning.get('DROP_VALUE_PROPERTYSQFT'), inplace=True)  # PROPERTYSQFT outliers
             
             logger.info("Delete Outlier Value...")
             
             #drop columns 
-            df.drop(Config.DROP_COLUMNS, axis=1, inplace=True)
+            df.drop(data_cleaning.get('DROP_COLUMNS'), axis=1, inplace=True)
             
-            logger.info(f"Delete Columns {Config.DROP_COLUMNS}")
+            logger.info(f"Delete Columns {data_cleaning.get('DROP_COLUMNS')}")
             
             
             # drop duplicate 
@@ -44,18 +46,24 @@ class DataLoader:
             
             
             #change type int
-            df[Config.BATH] = df[Config.BATH].astype(int)
-            df[Config.PROPERTYSQFT] = df[Config.PROPERTYSQFT].astype(int)
+            df['BATH'] = df['BATH'].astype(int)
+            df['PROPERTYSQFT'] = df['PROPERTYSQFT'].astype(int)
             
             logger.info(f"Change type int columns BATH and PROPERTYSQFT ")
+            
+            return True
+        except Exception as e : 
+            logger.error(f"Error Validate Data {str(e)} ")
+            raise
     
     def split_features_target(self, df:pd.DataFrame) -> Tuple[pd.DataFrame, pd.Series]:
-        try : 
+        try :
+            model_parameters = config.get('model_parameters') 
             logger.info("Splitting Features and Target")
-            X = df.drop(Config.TARGET_COLUMN,axis=1)
-            y = np.log(df[Config.TARGET_COLUMN])
+            X = df.drop(model_parameters.get('TARGET_COLUMN'),axis=1)
+            y = np.log(df[model_parameters.get('TARGET_COLUMN')])
             
-            logger.info(f"Split Completedd. Features shape : {X.shape}, Target Shape : {y.shape}")
+            logger.info(f"Split Completed. Features shape : {X.shape}, Target Shape : {y.shape}")
             
             return X,y
             

@@ -9,6 +9,9 @@ import pickle
 from src.utils.logger import default_logger as logger
 from src.models.model import ModelFactory
 from src.utils.config import config
+from sklearn.model_selection import GridSearchCV
+from sklearn.base import BaseEstimator
+from sklearn.pipeline import Pipeline
 
 class ModelTrainer:
     
@@ -16,7 +19,6 @@ class ModelTrainer:
         self.experiment_name = experiment_name
         self.models_info = {}
         self.best_model = None
-        self.setup_mlflow()
         logger.info(f"Initialized Model Trainer with Experiment : {experiment_name}")
     
     def _calculate_metrics(self,y_true: np.ndarray, y_pred : np.ndarray) -> Dict[str, float]:
@@ -31,76 +33,51 @@ class ModelTrainer:
         except Exception as e:
             logger.error(f"Error Calculating Metrics : {str(e)}")
             raise
-    def setup_mlflow(self) -> None :
-        try : 
-            tracking_uri = config.get('mlflow.tracking_uri', 'sqlite:///mlflow.db')
-            
-            mlflow.set_tracking_uri(tracking_uri)
-
-            mlflow.set_experiment(tracking_uri)
-            
-            # crete or et experiment
-            try :
-                self.experiment_id = mlflow.create_experiment(self.experiment_name)
-            except:
-                self.experiment_id = mlflow.get_experiment_by_name(self.experiment_name).experiment_id
-            mlflow.set_experiment(self.experiment_name)
-            logger.info("MLfow setup completed successfully")
-        
-        except Exception as e:
-            logger.error(f"Error settingg up MLflow : {str(e)}")
-            raise
-        
-    def train_model(self,model_type:str, X_train: pd.DataFrame, y_train : pd.Series,X_test: pd.DataFrame, y_test: pd.Series) -> Dict[str,Any] : 
-        try : 
-            logger.info(f"Training {model_type} model")
-            
-            model = ModelFactory.create_model(model_type)
-            model.fit(X_train,y_train)
-                        
-            # make predictions
-            y_pred = model.predict(X_test)
-            
-            # calucate metrics
-            metrics = self._calculate_metrics(y_test,y_pred)
-            
-            # log with Mlflow using nested runs
-            with mlflow.start_run(run_name=model_type,nested=True) as run :
-                
-                #log paramaters and metrics 
-                mlflow.log_params(model.get_params())
-                mlflow.log_metrics(metrics)
-                
-                #log model
-                mlflow.sklearn.log_model(
-                    model,
-                    model_type,
-                    registered_model_name=f"House_Predicted_{model_type}"
-                )
-            
-            # store model info 
-            model_info = {
-                'model' : model,
-                'metrics' : metrics,
-                'run_id' : run
-            }
-            
-            self.models_info[model_type] = model_info
-            
-            return model_info
-        except Exception as e:
-            logger.error(f"Error Training {model_type} model : {str(e)}")
-            raise
     
-    def train_all_models(self,X_train: pd.DataFrame, y_train : pd.Series, X_test : pd.DataFrame, y_test: pd.Series) -> Dict[str,Dict[str,Any]]:
+        
+        
+    def train_gridsearch(self,preprocessor,X_train: pd.DataFrame,X_test : pd.DataFrame, y_train : pd.Series, y_test : pd.Series) -> None:
         
         try : 
             logger.info("Starting training of all models")
             
-            for model_type in ModelFactory.get_model_config().keys():
-                self.train_model(model_type,X_train,y_train,X_test, y_test)
             
+            #running Grid Search CV
+            for model_type,model_config in ModelFactory.get_gridsearch_config().items():
+                with mlflow.start_run(run_name=f"GridSearch_{model_type}",nested=True):
+                    model_instance = model_config['model']
+                    params_instance = model_config['params']
+                    
+                    run_gridsearch = self.model_gridsearch(preprocessor,X_train,y_train,model_instance,params_instance)
+                    
+                    # get best params
+                    best_model = run_gridsearch.best_estimator_
+                    
+                    # save log paramns gridsearch
+                    mlflow.log_params(best_model.get_params())
+                    
+                    
+                    y_pred = run_gridsearch.predict(X_test)
+                    metrics = self._calculate_metrics(y_pred,y_test)
+                    
+                    #log metrik
+                    mlflow.log_metrics(metrics)
+                    
+                    self.models_info[model_type] = {
+                        'model' : best_model,
+                        'metrics' : metrics
+                    }
+                    #save log model
+                    mlflow.sklearn.log_model(best_model,
+                                             model_type,
+                                             registered_model_name=f"{model_type}_best_model"
+                                             )
+            
+                
+            logger.info("Completed Train Grid Search CV")    
+                
             self._select_best_model()
+            
             
             logger.info("Completed Training all Models")
             return self.models_info
@@ -108,26 +85,118 @@ class ModelTrainer:
             logger.error(f"Error Training Models : {str(e)}")
             raise
     
+    def model_gridsearch(
+        self,
+        preprocessor, 
+        X_train: pd.DataFrame, 
+        y_train: pd.Series, 
+        model: BaseEstimator, 
+        param_grid: Dict[str, List[Any]], 
+        scoring_metric: str = 'neg_root_mean_squared_error',
+        cv: int = 5
+    ) -> GridSearchCV:
+        """
+        Menerapkan Pipeline penuh (Preprocessing + Model) dan melakukan Grid Search.
+        
+        Args:
+            X_train: Data fitur yang sudah di-preprocess (dari fit_transform).
+            y_train: Data target.
+            model: Estimator model regresi (e.g., SVR(), Ridge()).
+            param_grid: Kamus parameter yang akan dicari oleh GridSearchCV.
+            scoring_metric: Metrik untuk dioptimalkan (neg_root_mean_squared_error, r2, dll).
+            cv: Jumlah fold untuk cross-validation.
+            
+        Returns:
+            GridSearchCV: Objek GridSearchCV yang sudah fit.
+        """
+        try : 
+            logger.info("Starting Model GridSearchCV....")
+            if preprocessor is None:
+                raise ValueError("Preprocessing pipeline not fitted. Run fit_transform first.")
+            
+            # 2. Buat Pipeline Penuh: Preprocessing (ColumnTransformer) + Model
+            # Catatan: Kita menggunakan preprocessor_pipeline yang sudah di fit.
+            full_pipeline = Pipeline(steps=[
+                # Tahap 1: Preprocessing (Sudah dilakukan di fit_transform, 
+                # tapi di sini kita hanya menggunakan ColumnTransformer sebagai step)
+                # Karena ColumnTransformer sudah disimpan, kita bisa menggunakannya di sini
+                ('preprocessor', preprocessor),
+                
+                # Tahap 2: Model Regresi
+                ('regressor', model)
+            ])
+            
+            # Penamaan parameter untuk GridSearch: 'nama_step__nama_parameter'
+            # Contoh: Jika model Anda adalah 'regressor', parameter 'C' akan menjadi 'regressor__C'
+            # Kita perlu memodifikasi param_grid agar sesuai dengan nama step 'regressor'
+            
+            # Ubah kunci param_grid: 'C' -> 'regressor__C'
+            grid_search_params = {f'regressor__{key}': value for key, value in param_grid.items()}
+
+            logger.info(f"Starting GridSearchCV with scoring: {scoring_metric}")
+            
+            # 3. Inisialisasi dan Jalankan Grid Search
+            grid_search = GridSearchCV(
+                estimator=full_pipeline,
+                param_grid=grid_search_params,
+                scoring=scoring_metric,
+                cv=cv,
+                verbose=1,
+                n_jobs=-1 # Gunakan semua core CPU
+            )
+            
+            # Grid Search Fit: Ini akan menjalankan semua langkah di full_pipeline 
+            # (termasuk transform oleh preprocessor) untuk setiap kombinasi parameter
+            grid_search.fit(X_train, y_train)
+            
+                        
+            
+            logger.info(f"GridSearchCV completed. Best score: {grid_search.best_score_:.4f}")
+            logger.info(f"Best parameters: {grid_search.best_params_}")
+            
+            return grid_search
+        except Exception as e:
+            logger.error(f"Error Train GridSearchCV : {str(e)}")
+            raise 
+    
+    
     def _select_best_model(self)->None : 
         try :
             logger.info("Selecting Best Model")
             best_model_type = None
+            best_r2_score = -float('inf')
+            
+            for model_type, model_info in self.models_info.items():
+                metrics = model_info.get('metrics', {})
+                current_r2 = metrics.get('R2_SCORE', -float('inf'))
+
+                if current_r2 > best_r2_score:
+                    best_r2_score = current_r2
+                    best_model_type = model_type
+                
             
             if  best_model_type:
-                self.best_model = self.models_info[best_model_type]
-                
+                self.best_model = self.models_info[best_model_type] 
+
+                # Ambil objek model untuk pickling:
+                model_instance_to_pickle = self.best_model['model']
                 # Transition best model to production MLflow
                 client = mlflow.tracking.MlflowClient()
-                model_name = f"New_York_{best_model_type}"
+                model_name = f"{best_model_type}_best_model"
                 
                 latest_versions = client.get_latest_versions(model_name)
                 if latest_versions:
-                    latest_versions = latest_versions[0]
+                    model_version_object = latest_versions[0]
+                    version_id = model_version_object.version
                     client.transition_model_version_stage(
                         name=model_name,
-                        version=latest_versions,
+                        version=version_id,
                         stage="Production"
                     )
+                #save model pickle
+                with open("best_model.pkl",'wb') as f:
+                    pickle.dump(model_instance_to_pickle,f)
+                
                 logger.info(f"Selected {best_model_type} as best model")
                 logger.info(f"Best Model Metrics :  {self.best_model['metrics']}")
         except Exception as e:

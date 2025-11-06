@@ -59,36 +59,35 @@ class ModelFactory:
         }
     }
     @staticmethod
-    
     def get_gridsearch_config() -> Dict[str,Dict[str,Any]]:
         return {
         'XGB_Regressor': {
         'model' : XGBRegressor(random_state=42,enable_categorical= True, use_label_encoder = False),
         'params' : {
-            'regressor__n_estinamtor' : [200,300,400],
-            'regressor__max_depth'  : [4,6,8],
-            'regressor__learning_rate' : [0.05 ,0.1], 
+            'n_estinamtor' : [200,300,400],
+            'max_depth'  : [4,6,8],
+            'learning_rate' : [0.05 ,0.1], 
             }
         },
         'Random_Forest_Regressor': {
         'model' : RandomForestRegressor(random_state=42),
         'params' : {
-            'regressor__n_estimators' : [100,200,300],
-            'regressor__max_depth' : [8,10,12],
+            'n_estimators' : [100,200,300],
+            'max_depth' : [8,10,12],
             }
         },    
         'Gradient_Boosting_Regressor': {
         'model' : GradientBoostingRegressor(random_state=42),
         'params' : {
-            'regressor__n_estimators' : [100,200,300],
-            'regressor__learning_rate' : [0.05,0.1],
-            'regressor__max_depth' : [4,6,8],
+            'n_estimators' : [100,200,300],
+            'learning_rate' : [0.05,0.1],
+            'max_depth' : [4,6,8],
             }
         },
         'Decision_Tree_Regressor': {
         'model' : DecisionTreeRegressor(random_state=42),
         'params' : {
-            'regressor__max_depth' : [8,10,12,15],
+            'max_depth' : [8,10,12,15],
             }
         }
         }
@@ -99,7 +98,7 @@ class ModelFactory:
             logger.info(f"Create model of type : {model_type}")
             
             # get model config
-            model_configs=  cls.get_model_config()
+            model_configs=  cls.get_gridsearch_config()
             
             if model_type not in model_configs:
                 raise ValueError(f"Unknown model type :{model_type}")
@@ -120,7 +119,7 @@ class ModelFactory:
             return model
         
         except Exception as e:
-            logger.error(f"Error Creating mmodel : {str(e)}")
+            logger.error(f"Error Creating model : {str(e)}")
             raise
     
         

@@ -1,0 +1,101 @@
+# --- Konfigurasi Jalur (Paths) ---
+  # Catatan: Jalur ini bersifat relatif terhadap lokasi di mana BASE_DIR (Path(__file__).parent.parent) 
+  # diasumsikan (misalnya, direktori root proyek Anda, jika file config.yaml ada di dalamnya).
+BASE_DIR: "." # Direktori basis proyek
+ARTIFACTS_DIR: "artifacts"
+LOGS_DIR: "logs"
+STATIC_DIR: "static"
+ASSETS_DIR: "static/assets"
+CSS_DIR: "static/css"
+# Jalur Data dan Model
+DATA_PATH: "artifacts/NY-House-Dataset.csv"
+MODEL_PATH: "artifacts/best_model.pkl"
+ENCODING_PATH: "artifacts/encoder.pkl"
+METRICS_PATH: "artifacts/metrics.json"
+ALL_METRICS_PATH: "artifacts/all_metrics.json"
+BEST_ESTIMATOR_PATH: "artifacts/best_estimators.json"
+preprocessing_path: "models/preprocessing"
+
+# --- Parameter Model ---
+model_parameters:
+  RANDOM_STATE: 42
+  TEST_SIZE: 0.2
+  TARGET_COLUMN: "PRICE"
+  FEATURE_COLUMN:
+    - PRICE
+    - BEDS
+    - BATH
+    - PROPERTYSQFT
+    - LOCALITY
+  
+  # Kolom untuk diubah tipe datanya menjadi integer (int)
+  CHANGE_TYPE_INT:
+    - BATH
+    - PROPERTYSQFT
+
+# --- Definisi Fitur Kategori (LOCALITY) ---
+feature_locality:
+  LOCALITY_COLUMN:
+    - New York
+    - New York County
+    - The Bronx
+    - Kings County
+    - Bronx County
+    - Queens County
+    - Richmond County
+    - United States
+    - Brooklyn
+    - Queens
+    - Flatbush
+
+
+# --- Aturan Validasi Data ---
+data_validation_rules:
+  PRICE:
+    min: 1000
+    max: 100000000
+  BEDS:
+    min: 1
+    max: 10
+  BATH:
+    min: 1
+    max: 5
+  PROPERTYSQFT:
+    min: 10
+    max: 10000
+
+# --- Nilai dan Kolom yang Dihapus (Drop) ---
+data_cleaning:
+  DROP_VALUE_PRICE: [304, 1, 317, 310, 360, 463]
+  DROP_VALUE_BEDS: [1143, 2653, 3276, 2488, 765, 2265, 3589, 3603, 4240, 2564, 1092, 1410, 1214, 750, 4191, 4404]
+  DROP_VALUE_PROPERTYSQFT: [4623, 2146, 2148, 823, 3130, 141, 2932, 2054, 917, 1823, 4353, 2107, 69, 4, 2171]
+  DROP_COLUMNS:
+    - TYPE
+    - STATE
+    - ADDRESS
+    - MAIN_ADDRESS
+    - ADMINISTRATIVE_AREA_LEVEL_2
+    - STREET_NAME
+    - LONG_NAME
+    - FORMATTED_ADDRESS
+    - LONGITUDE
+    - LATITUDE
+    - BROKERTITLE
+    - SUBLOCALITY
+
+# --- Parameter Hyperparameter Tuning (XGBoost) ---
+hyper_tuning:
+  PARAMS:
+    regressor__n_estimators: [100, 200, 300, 400]
+    regressor__max_depth: [2, 4, 6, 8, 10]
+    regressor__learning_rate: [0.05, 0.01, 0.1]
+  CV_FOLDS: 5
+  SCORING: "neg_mean_squared_error"
+
+# --- Pengaturan FastAPI ---
+fastapi_settings:
+  API_TITLE: "New York House Price Prediction API"
+  API_DESCRIPTION: "API for predicting house prices using the New York House Price Dataset"
+  API_VERSION: "1.0.0"
+  HOST: "0.0.0.0"
+  PORT: 8000

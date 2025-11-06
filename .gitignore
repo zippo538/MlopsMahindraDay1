@@ -4,3 +4,4 @@ __pycache__/
 .ipynb_checkpoints
 research/mlruns/
 research/*_model.pkl
+mlruns/

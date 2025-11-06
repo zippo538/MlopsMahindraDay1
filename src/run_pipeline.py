@@ -13,6 +13,7 @@ from src.data.data_processor import DataProcessor
 from src.models.trainer import ModelTrainer
 from src.utils.logger import default_logger as logger
 from src.utils.config import config
+from config.config import Config
 
 def setup_mlflow():
     """Setup MLflow configuration"""
@@ -21,7 +22,7 @@ def setup_mlflow():
         mlflow.set_tracking_uri('sqlite:///mlflow.db')
         
         # Set experiment
-        experiment_name = "telco_churn_experiment"
+        experiment_name = "new_york_house_prediction"
         try:
             mlflow.create_experiment(experiment_name)
         except:
@@ -58,8 +59,10 @@ def run_pipeline():
             data_loader = DataLoader()
             df = data_loader.load_data()
             
+            #validate data
             if not data_loader.validate_data(df):
                 raise ValueError("Data validation failed")
+                
             
             # Log data info
             mlflow.log_param("data_shape", str(df.shape))
@@ -68,40 +71,48 @@ def run_pipeline():
             # 2. Preprocessing
             logger.info("Step 2: Preprocessing data")
             preprocessor = DataProcessor()
-            X, y = preprocessor.fit_transform(df)
+            X, y = preprocessor.data_split(df,'PRICE')
             
             # Split data
             X_train, X_test, y_train, y_test = train_test_split(
                 X, y, test_size=0.2, random_state=42
             )
             
+            #build Columns Transformer
+            preprocessor_pipeline= preprocessor.preprocessor_columns_transformer(X)
+            
             # Log preprocessing info
             mlflow.log_param("train_size", X_train.shape[0])
             mlflow.log_param("test_size", X_test.shape[0])
+                       
             
-            # Save preprocessors for later use
-            preprocessor.save_preprocessors()
-            
-            # 3. Model Training and Evaluation
-            logger.info("Step 3: Training and evaluating models")
+                                    
+            # 3. GridSearch CV 
+            logger.info("Step 3: Train Grid Search CV and Evaluation")
             trainer = ModelTrainer(experiment_name)
             
             # Train all models (will create nested runs)
-            results = trainer.train_all_models(
+            
+            trainer.train_gridsearch(
                 X_train=X_train,
-                y_train=y_train,
                 X_test=X_test,
-                y_test=y_test
+                y_train=y_train,
+                y_test=y_test,
+                preprocessor=preprocessor_pipeline
             )
             
+           
+            
+            
             # 4. Log best model info
-            best_model = trainer.get_best_model()
+            logger.info("Step 4 : Log Best and Model Info")
+            best_model = trainer.get_best_model() # Mengembalikan dictionary {'model':..., 'metrics':...}
             mlflow.log_params({
-                "best_model_type": best_model['model'].__class__.__name__,
+                "best_model_type": best_model['model'].__class__.__name__, # model diakses
                 "best_model_params": str(best_model['model'].get_params())
             })
             mlflow.log_metrics({
-                f"best_model_{k}": v for k, v in best_model['metrics'].items()
+                f"best_model_{k}": v for k, v in best_model['metrics'].items() # metrics diakses
             })
             
             logger.info("Pipeline execution completed successfully")
