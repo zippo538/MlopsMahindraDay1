@@ -13,7 +13,6 @@ from src.data.data_processor import DataProcessor
 from src.models.trainer import ModelTrainer
 from src.utils.logger import default_logger as logger
 from src.utils.config import config
-from config.config import Config
 
 def setup_mlflow():
     """Setup MLflow configuration"""
@@ -22,7 +21,7 @@ def setup_mlflow():
         mlflow.set_tracking_uri('sqlite:///mlflow.db')
         
         # Set experiment
-        experiment_name = "new_york_house_prediction"
+        experiment_name = config.get("EXPERIMENT_NAME")
         try:
             mlflow.create_experiment(experiment_name)
         except:
@@ -79,7 +78,7 @@ def run_pipeline():
             )
             
             #build Columns Transformer
-            preprocessor_pipeline= preprocessor.preprocessor_columns_transformer(X)
+            preprocessor_pipeline= preprocessor.preprocessor_columns_transformer(X_train,y_train)
             
             # Log preprocessing info
             mlflow.log_param("train_size", X_train.shape[0])

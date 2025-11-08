@@ -5,3 +5,4 @@ __pycache__/
 research/mlruns/
 research/*_model.pkl
 mlruns/
+best_model.pkl

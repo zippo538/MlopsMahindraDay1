@@ -31,8 +31,8 @@ class DataProcessor :
     def data_split(self, df:pd.DataFrame, target_col:str) -> Tuple[pd.DataFrame, Optional[pd.Series]]:
         try : 
             self.target_col = target_col
-            y = df[target_col] if target_col in df.columns else None
-            X = df.drop(columns=[target_col], errors='ignore')
+            X = df.drop(columns=[target_col], axis=1)
+            y = df[target_col] 
             self.feature_cols = X.columns.tolist()
             
                         
@@ -67,22 +67,21 @@ class DataProcessor :
             raise
 
     ## preprocess 
-    def preprocessor_columns_transformer(self,X : pd.DataFrame) -> ColumnTransformer : 
-        # Pisahkan kolom numerik dan kategorikal
-            numerical_cols = X.select_dtypes(include=np.number).columns.tolist()
-            categorical_cols = X.select_dtypes(include=['object', 'category']).columns.tolist()
-
+    def preprocessor_columns_transformer(self,X_train: pd.DataFrame, y_train : pd.Series) -> ColumnTransformer : 
+            feature_columns_transformer = config.get('columns_tranformer')
+            scale = feature_columns_transformer.get('SCALE')
+            ohe = feature_columns_transformer.get('OHE')
+            
             # 1. Definisikan ColumnTransformer (Preprocessing Pipeline)
             preprocessor = ColumnTransformer(
                 transformers=[
-                    ('scale', StandardScaler(), numerical_cols),
-                    ('ohe', OneHotEncoder(handle_unknown='ignore'), categorical_cols)
+                    ('scale', StandardScaler(), scale),
+                    ('ohe', OneHotEncoder(handle_unknown='ignore'), ohe)
                 ],
-                remainder='passthrough' # Biarkan kolom lain apa adanya (jika ada)
             )
             
             # Fit dan Transform
-            preprocessor.fit_transform(X)
+            preprocessor.fit(X_train,y_train)
             self.preprocessor_pipeline = preprocessor 
             self.trained = True
             

@@ -64,7 +64,7 @@ class ModelFactory:
         'XGB_Regressor': {
         'model' : XGBRegressor(random_state=42,enable_categorical= True, use_label_encoder = False),
         'params' : {
-            'n_estinamtor' : [200,300,400],
+            'n_estinamtors' : [200,300,400],
             'max_depth'  : [4,6,8],
             'learning_rate' : [0.05 ,0.1], 
             }

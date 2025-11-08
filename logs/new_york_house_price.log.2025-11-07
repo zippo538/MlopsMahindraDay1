@@ -1,0 +1,664 @@
+2025-11-07 20:09:08 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-07 20:09:08 - new_york_house_price - ERROR - Erro loading Configuration : while scanning a simple key
+  in "config/config.yaml", line 12, column 1
+could not find expected ':'
+  in "config/config.yaml", line 13, column 1
+2025-11-07 20:10:37 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-07 20:10:37 - new_york_house_price - ERROR - Erro loading Configuration : while scanning a simple key
+  in "config/config.yaml", line 12, column 1
+could not find expected ':'
+  in "config/config.yaml", line 13, column 1
+2025-11-07 20:11:27 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-07 20:11:27 - new_york_house_price - ERROR - Erro loading Configuration : while scanning a simple key
+  in "config/config.yaml", line 12, column 1
+could not find expected ':'
+  in "config/config.yaml", line 13, column 1
+2025-11-07 20:12:01 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-07 20:12:01 - new_york_house_price - ERROR - Erro loading Configuration : while scanning a simple key
+  in "config/config.yaml", line 12, column 1
+could not find expected ':'
+  in "config/config.yaml", line 13, column 1
+2025-11-07 20:12:23 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-07 20:12:23 - new_york_house_price - ERROR - Erro loading Configuration : while scanning a simple key
+  in "config/config.yaml", line 12, column 1
+could not find expected ':'
+  in "config/config.yaml", line 13, column 1
+2025-11-07 20:13:00 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-07 20:13:00 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-07 20:13:09 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-07 20:13:09 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-07 20:13:09 - new_york_house_price - INFO - Deleted existing MLflow database
+2025-11-07 20:13:09 - new_york_house_price - INFO - Starting pipeline execution
+2025-11-07 20:13:10 - new_york_house_price - INFO - MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-11-07 20:13:10 - new_york_house_price - INFO - Experiment name: new_york_house_prediction
+2025-11-07 20:13:11 - new_york_house_price - INFO - Started pipeline run with ID: 4c54d70cb8a945bf8541d3590a08c538
+2025-11-07 20:13:11 - new_york_house_price - INFO - Step 1: Loading data
+2025-11-07 20:13:11 - new_york_house_price - INFO - Initialized Dataloader with path : /home/mahindra/Downloads/python/dibimbing/MlopsMahindraDay1/data/NY-House_dataset.csv
+2025-11-07 20:13:11 - new_york_house_price - INFO - Loading data from csv
+2025-11-07 20:13:11 - new_york_house_price - INFO - Data Successfully Load
+2025-11-07 20:13:11 - new_york_house_price - INFO - Validate Data 
+2025-11-07 20:13:11 - new_york_house_price - INFO - Delete Outlier Value...
+2025-11-07 20:13:11 - new_york_house_price - INFO - Delete Columns ['TYPE', 'STATE', 'ADDRESS', 'MAIN_ADDRESS', 'ADMINISTRATIVE_AREA_LEVEL_2', 'STREET_NAME', 'LONG_NAME', 'FORMATTED_ADDRESS', 'LONGITUDE', 'LATITUDE', 'BROKERTITLE', 'SUBLOCALITY']
+2025-11-07 20:13:11 - new_york_house_price - INFO - Drop Duplicate Value
+2025-11-07 20:13:11 - new_york_house_price - INFO - Change type int columns BATH and PROPERTYSQFT 
+2025-11-07 20:13:11 - new_york_house_price - INFO - Step 2: Preprocessing data
+2025-11-07 20:13:11 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-07 20:13:11 - new_york_house_price - INFO - Split Data. New features count: 4
+2025-11-07 20:13:11 - new_york_house_price - INFO - Saving preprocessor to models/preprocessing
+2025-11-07 20:13:11 - new_york_house_price - INFO - Data Has Been Format Coloumns Transformer
+2025-11-07 20:13:11 - new_york_house_price - INFO - Step 3: Train Grid Search CV and Evaluation
+2025-11-07 20:13:11 - new_york_house_price - INFO - Initialized Model Trainer with Experiment : new_york_house_prediction
+2025-11-07 20:13:11 - new_york_house_price - INFO - Starting training of all models
+2025-11-07 20:13:11 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 20:13:17 - new_york_house_price - INFO - GridSearchCV completed. Best score: -2795714.2000
+2025-11-07 20:13:17 - new_york_house_price - INFO - Best parameters: {'regressor__learning_rate': 0.05, 'regressor__max_depth': 4, 'regressor__n_estinamtor': 200}
+2025-11-07 20:13:20 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 20:13:35 - new_york_house_price - INFO - GridSearchCV completed. Best score: -2716443.8650
+2025-11-07 20:13:35 - new_york_house_price - INFO - Best parameters: {'regressor__max_depth': 8, 'regressor__n_estimators': 200}
+2025-11-07 20:13:38 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 20:13:53 - new_york_house_price - INFO - GridSearchCV completed. Best score: -2823116.8097
+2025-11-07 20:13:53 - new_york_house_price - INFO - Best parameters: {'regressor__learning_rate': 0.1, 'regressor__max_depth': 4, 'regressor__n_estimators': 100}
+2025-11-07 20:13:55 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 20:13:56 - new_york_house_price - INFO - GridSearchCV completed. Best score: -3198438.9573
+2025-11-07 20:13:56 - new_york_house_price - INFO - Best parameters: {'regressor__max_depth': 8}
+2025-11-07 20:13:58 - new_york_house_price - INFO - Completed Train Grid Search CV
+2025-11-07 20:13:58 - new_york_house_price - INFO - Selecting Best Model
+2025-11-07 20:13:58 - new_york_house_price - INFO - Completed Training all Models
+2025-11-07 20:13:58 - new_york_house_price - INFO - Step 4 : Log Best and Model Info
+2025-11-07 20:13:58 - new_york_house_price - ERROR - Pipeline execution failed: No Best Model Selected. Train models first
+2025-11-07 20:16:13 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-07 20:16:13 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-07 20:16:14 - new_york_house_price - INFO - Deleted existing MLflow database
+2025-11-07 20:16:14 - new_york_house_price - INFO - Starting pipeline execution
+2025-11-07 20:16:15 - new_york_house_price - INFO - MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-11-07 20:16:15 - new_york_house_price - INFO - Experiment name: new_york_house_prediction
+2025-11-07 20:16:15 - new_york_house_price - INFO - Started pipeline run with ID: 03ae1c2cbe3b458aa773d31071691616
+2025-11-07 20:16:15 - new_york_house_price - INFO - Step 1: Loading data
+2025-11-07 20:16:15 - new_york_house_price - INFO - Initialized Dataloader with path : /home/mahindra/Downloads/python/dibimbing/MlopsMahindraDay1/data/NY-House_dataset.csv
+2025-11-07 20:16:15 - new_york_house_price - INFO - Loading data from csv
+2025-11-07 20:16:15 - new_york_house_price - INFO - Data Successfully Load
+2025-11-07 20:16:15 - new_york_house_price - INFO - Validate Data 
+2025-11-07 20:16:15 - new_york_house_price - INFO - Delete Outlier Value...
+2025-11-07 20:16:15 - new_york_house_price - INFO - Delete Columns ['TYPE', 'STATE', 'ADDRESS', 'MAIN_ADDRESS', 'ADMINISTRATIVE_AREA_LEVEL_2', 'STREET_NAME', 'LONG_NAME', 'FORMATTED_ADDRESS', 'LONGITUDE', 'LATITUDE', 'BROKERTITLE', 'SUBLOCALITY']
+2025-11-07 20:16:15 - new_york_house_price - INFO - Drop Duplicate Value
+2025-11-07 20:16:15 - new_york_house_price - INFO - Change type int columns BATH and PROPERTYSQFT 
+2025-11-07 20:16:15 - new_york_house_price - INFO - Step 2: Preprocessing data
+2025-11-07 20:16:15 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-07 20:16:15 - new_york_house_price - INFO - Split Data. New features count: 4
+2025-11-07 20:16:15 - new_york_house_price - INFO - Saving preprocessor to models/preprocessing
+2025-11-07 20:16:15 - new_york_house_price - INFO - Data Has Been Format Coloumns Transformer
+2025-11-07 20:16:15 - new_york_house_price - INFO - Step 3: Train Grid Search CV and Evaluation
+2025-11-07 20:16:15 - new_york_house_price - INFO - Initialized Model Trainer with Experiment : new_york_house_prediction
+2025-11-07 20:16:15 - new_york_house_price - INFO - Starting training of all models
+2025-11-07 20:16:15 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 20:16:21 - new_york_house_price - INFO - GridSearchCV completed. Best score: -2795714.2000
+2025-11-07 20:16:21 - new_york_house_price - INFO - Best parameters: {'regressor__learning_rate': 0.05, 'regressor__max_depth': 4, 'regressor__n_estinamtor': 200}
+2025-11-07 20:16:24 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 20:16:39 - new_york_house_price - INFO - GridSearchCV completed. Best score: -2716443.8650
+2025-11-07 20:16:39 - new_york_house_price - INFO - Best parameters: {'regressor__max_depth': 8, 'regressor__n_estimators': 200}
+2025-11-07 20:16:42 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 20:16:57 - new_york_house_price - INFO - GridSearchCV completed. Best score: -2823116.8097
+2025-11-07 20:16:57 - new_york_house_price - INFO - Best parameters: {'regressor__learning_rate': 0.1, 'regressor__max_depth': 4, 'regressor__n_estimators': 100}
+2025-11-07 20:16:59 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 20:16:59 - new_york_house_price - INFO - GridSearchCV completed. Best score: -3198438.9573
+2025-11-07 20:16:59 - new_york_house_price - INFO - Best parameters: {'regressor__max_depth': 8}
+2025-11-07 20:17:02 - new_york_house_price - INFO - Completed Train Grid Search CV
+2025-11-07 20:17:02 - new_york_house_price - INFO - Selecting Best Model
+2025-11-07 20:17:02 - new_york_house_price - INFO - {'XGB_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(remainder='passthrough',
+                                   transformers=[('scale', StandardScaler(),
+                                                  ['BEDS', 'BATH',
+                                                   'PROPERTYSQFT']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 XGBRegressor(base_score=None, booster=None, callbacks=None,
+                              colsample_bylevel=None, colsample_bynode=None,
+                              colsample_bytree=None, devi...
+                              feature_types=None, feature_weights=None,
+                              gamma=None, grow_policy=None,
+                              importance_type=None,
+                              interaction_constraints=None, learning_rate=0.05,
+                              max_bin=None, max_cat_threshold=None,
+                              max_cat_to_onehot=None, max_delta_step=None,
+                              max_depth=4, max_leaves=None,
+                              min_child_weight=None, missing=nan,
+                              monotone_constraints=None, multi_strategy=None,
+                              n_estimators=None, n_estinamtor=200, n_jobs=None, ...))]), 'metrics': {'MAE': 1065616.875, 'RMSE': 9070997143552.0, 'R2_SCORE': -0.040611982345581055}}, 'Random_Forest_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(remainder='passthrough',
+                                   transformers=[('scale', StandardScaler(),
+                                                  ['BEDS', 'BATH',
+                                                   'PROPERTYSQFT']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 RandomForestRegressor(max_depth=8, n_estimators=200,
+                                       random_state=42))]), 'metrics': {'MAE': 1011545.2544261294, 'RMSE': 8018301801782.308, 'R2_SCORE': 0.17400136344297112}}, 'Gradient_Boosting_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(remainder='passthrough',
+                                   transformers=[('scale', StandardScaler(),
+                                                  ['BEDS', 'BATH',
+                                                   'PROPERTYSQFT']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 GradientBoostingRegressor(max_depth=4, random_state=42))]), 'metrics': {'MAE': 1050233.803724378, 'RMSE': 8322288945504.0205, 'R2_SCORE': 0.2523748989953326}}, 'Decision_Tree_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(remainder='passthrough',
+                                   transformers=[('scale', StandardScaler(),
+                                                  ['BEDS', 'BATH',
+                                                   'PROPERTYSQFT']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 DecisionTreeRegressor(max_depth=8, random_state=42))]), 'metrics': {'MAE': 1188335.9211927247, 'RMSE': 14212883299582.674, 'R2_SCORE': 0.034370925920154005}}}
+2025-11-07 20:17:02 - new_york_house_price - INFO - Selected Gradient_Boosting_Regressor as best model
+2025-11-07 20:17:02 - new_york_house_price - INFO - Best Model Metrics :  {'MAE': 1050233.803724378, 'RMSE': 8322288945504.0205, 'R2_SCORE': 0.2523748989953326}
+2025-11-07 20:17:02 - new_york_house_price - INFO - Completed Training all Models
+2025-11-07 20:17:02 - new_york_house_price - INFO - Step 4 : Log Best and Model Info
+2025-11-07 20:17:02 - new_york_house_price - INFO - Pipeline execution completed successfully
+2025-11-07 20:37:29 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-07 20:37:29 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-07 20:37:29 - new_york_house_price - INFO - Deleted existing MLflow database
+2025-11-07 20:37:29 - new_york_house_price - INFO - Starting pipeline execution
+2025-11-07 20:37:30 - new_york_house_price - INFO - MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-11-07 20:37:30 - new_york_house_price - INFO - Experiment name: new_york_house_prediction
+2025-11-07 20:37:31 - new_york_house_price - INFO - Started pipeline run with ID: b8d499aef3fa46bf9b8793c3120c01e7
+2025-11-07 20:37:31 - new_york_house_price - INFO - Step 1: Loading data
+2025-11-07 20:37:31 - new_york_house_price - INFO - Initialized Dataloader with path : /home/mahindra/Downloads/python/dibimbing/MlopsMahindraDay1/data/NY-House_dataset.csv
+2025-11-07 20:37:31 - new_york_house_price - INFO - Loading data from csv
+2025-11-07 20:37:31 - new_york_house_price - INFO - Data Successfully Load
+2025-11-07 20:37:31 - new_york_house_price - INFO - Validate Data 
+2025-11-07 20:37:31 - new_york_house_price - INFO - Delete Outlier Value...
+2025-11-07 20:37:31 - new_york_house_price - INFO - Delete Columns ['TYPE', 'STATE', 'ADDRESS', 'MAIN_ADDRESS', 'ADMINISTRATIVE_AREA_LEVEL_2', 'STREET_NAME', 'LONG_NAME', 'FORMATTED_ADDRESS', 'LONGITUDE', 'LATITUDE', 'BROKERTITLE', 'SUBLOCALITY']
+2025-11-07 20:37:31 - new_york_house_price - INFO - Drop Duplicate Value
+2025-11-07 20:37:31 - new_york_house_price - INFO - Change type int columns BATH and PROPERTYSQFT 
+2025-11-07 20:37:31 - new_york_house_price - INFO - Step 2: Preprocessing data
+2025-11-07 20:37:31 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-07 20:37:31 - new_york_house_price - INFO - Split Data. New features count: 4
+2025-11-07 20:37:31 - new_york_house_price - ERROR - Pipeline execution failed: A given column is not a column of the dataframe
+2025-11-07 20:37:40 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-07 20:37:40 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-07 20:37:40 - new_york_house_price - INFO - Deleted existing MLflow database
+2025-11-07 20:37:40 - new_york_house_price - INFO - Starting pipeline execution
+2025-11-07 20:37:41 - new_york_house_price - INFO - MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-11-07 20:37:41 - new_york_house_price - INFO - Experiment name: new_york_house_prediction
+2025-11-07 20:37:41 - new_york_house_price - INFO - Started pipeline run with ID: 1ac4397c73234f79b63da7c5497d3da4
+2025-11-07 20:37:41 - new_york_house_price - INFO - Step 1: Loading data
+2025-11-07 20:37:41 - new_york_house_price - INFO - Initialized Dataloader with path : /home/mahindra/Downloads/python/dibimbing/MlopsMahindraDay1/data/NY-House_dataset.csv
+2025-11-07 20:37:41 - new_york_house_price - INFO - Loading data from csv
+2025-11-07 20:37:41 - new_york_house_price - INFO - Data Successfully Load
+2025-11-07 20:37:41 - new_york_house_price - INFO - Validate Data 
+2025-11-07 20:37:41 - new_york_house_price - INFO - Delete Outlier Value...
+2025-11-07 20:37:41 - new_york_house_price - INFO - Delete Columns ['TYPE', 'STATE', 'ADDRESS', 'MAIN_ADDRESS', 'ADMINISTRATIVE_AREA_LEVEL_2', 'STREET_NAME', 'LONG_NAME', 'FORMATTED_ADDRESS', 'LONGITUDE', 'LATITUDE', 'BROKERTITLE', 'SUBLOCALITY']
+2025-11-07 20:37:41 - new_york_house_price - INFO - Drop Duplicate Value
+2025-11-07 20:37:41 - new_york_house_price - INFO - Change type int columns BATH and PROPERTYSQFT 
+2025-11-07 20:37:41 - new_york_house_price - INFO - Step 2: Preprocessing data
+2025-11-07 20:37:41 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-07 20:37:41 - new_york_house_price - INFO - Split Data. New features count: 4
+2025-11-07 20:37:41 - new_york_house_price - ERROR - Pipeline execution failed: A given column is not a column of the dataframe
+2025-11-07 20:38:22 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-07 20:38:22 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-07 20:38:22 - new_york_house_price - INFO - Deleted existing MLflow database
+2025-11-07 20:38:22 - new_york_house_price - INFO - Starting pipeline execution
+2025-11-07 20:38:23 - new_york_house_price - INFO - MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-11-07 20:38:23 - new_york_house_price - INFO - Experiment name: new_york_house_prediction
+2025-11-07 20:38:23 - new_york_house_price - INFO - Started pipeline run with ID: e924889893d34e0c8aede8138dca1e80
+2025-11-07 20:38:23 - new_york_house_price - INFO - Step 1: Loading data
+2025-11-07 20:38:23 - new_york_house_price - INFO - Initialized Dataloader with path : /home/mahindra/Downloads/python/dibimbing/MlopsMahindraDay1/data/NY-House_dataset.csv
+2025-11-07 20:38:23 - new_york_house_price - INFO - Loading data from csv
+2025-11-07 20:38:24 - new_york_house_price - INFO - Data Successfully Load
+2025-11-07 20:38:24 - new_york_house_price - INFO - Validate Data 
+2025-11-07 20:38:24 - new_york_house_price - INFO - Delete Outlier Value...
+2025-11-07 20:38:24 - new_york_house_price - INFO - Delete Columns ['TYPE', 'STATE', 'ADDRESS', 'MAIN_ADDRESS', 'ADMINISTRATIVE_AREA_LEVEL_2', 'STREET_NAME', 'LONG_NAME', 'FORMATTED_ADDRESS', 'LONGITUDE', 'LATITUDE', 'BROKERTITLE', 'SUBLOCALITY']
+2025-11-07 20:38:24 - new_york_house_price - INFO - Drop Duplicate Value
+2025-11-07 20:38:24 - new_york_house_price - INFO - Change type int columns BATH and PROPERTYSQFT 
+2025-11-07 20:38:24 - new_york_house_price - INFO - Step 2: Preprocessing data
+2025-11-07 20:38:24 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-07 20:38:24 - new_york_house_price - INFO - Split Data. New features count: 4
+2025-11-07 20:38:24 - new_york_house_price - ERROR - Pipeline execution failed: A given column is not a column of the dataframe
+2025-11-07 20:40:59 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-07 20:40:59 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-07 20:40:59 - new_york_house_price - INFO - Deleted existing MLflow database
+2025-11-07 20:40:59 - new_york_house_price - INFO - Starting pipeline execution
+2025-11-07 20:41:00 - new_york_house_price - INFO - MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-11-07 20:41:00 - new_york_house_price - INFO - Experiment name: new_york_house_prediction
+2025-11-07 20:41:01 - new_york_house_price - INFO - Started pipeline run with ID: 1dff7ca559104ad1967034d24c857947
+2025-11-07 20:41:01 - new_york_house_price - INFO - Step 1: Loading data
+2025-11-07 20:41:01 - new_york_house_price - INFO - Initialized Dataloader with path : /home/mahindra/Downloads/python/dibimbing/MlopsMahindraDay1/data/NY-House_dataset.csv
+2025-11-07 20:41:01 - new_york_house_price - INFO - Loading data from csv
+2025-11-07 20:41:01 - new_york_house_price - INFO - Data Successfully Load
+2025-11-07 20:41:01 - new_york_house_price - INFO - Validate Data 
+2025-11-07 20:41:01 - new_york_house_price - INFO - Delete Outlier Value...
+2025-11-07 20:41:01 - new_york_house_price - INFO - Delete Columns ['TYPE', 'STATE', 'ADDRESS', 'MAIN_ADDRESS', 'ADMINISTRATIVE_AREA_LEVEL_2', 'STREET_NAME', 'LONG_NAME', 'FORMATTED_ADDRESS', 'BROKERTITLE', 'SUBLOCALITY']
+2025-11-07 20:41:01 - new_york_house_price - INFO - Drop Duplicate Value
+2025-11-07 20:41:01 - new_york_house_price - INFO - Change type int columns BATH and PROPERTYSQFT 
+2025-11-07 20:41:01 - new_york_house_price - INFO - Step 2: Preprocessing data
+2025-11-07 20:41:01 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-07 20:41:01 - new_york_house_price - INFO - Split Data. New features count: 6
+2025-11-07 20:41:01 - new_york_house_price - ERROR - Pipeline execution failed: Expected a 2-dimensional container but got <class 'pandas.core.series.Series'> instead. Pass a DataFrame containing a single row (i.e. single sample) or a single column (i.e. single feature) instead.
+2025-11-07 20:53:43 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-07 20:53:43 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-07 20:53:43 - new_york_house_price - INFO - Deleted existing MLflow database
+2025-11-07 20:53:43 - new_york_house_price - INFO - Starting pipeline execution
+2025-11-07 20:53:44 - new_york_house_price - INFO - MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-11-07 20:53:44 - new_york_house_price - INFO - Experiment name: new_york_house_prediction
+2025-11-07 20:53:44 - new_york_house_price - INFO - Started pipeline run with ID: 67b65cf400f94c818d5ce4606de0c2fe
+2025-11-07 20:53:44 - new_york_house_price - INFO - Step 1: Loading data
+2025-11-07 20:53:44 - new_york_house_price - INFO - Initialized Dataloader with path : /home/mahindra/Downloads/python/dibimbing/MlopsMahindraDay1/data/NY-House_dataset.csv
+2025-11-07 20:53:44 - new_york_house_price - INFO - Loading data from csv
+2025-11-07 20:53:44 - new_york_house_price - INFO - Data Successfully Load
+2025-11-07 20:53:44 - new_york_house_price - INFO - Validate Data 
+2025-11-07 20:53:44 - new_york_house_price - INFO - Delete Outlier Value...
+2025-11-07 20:53:44 - new_york_house_price - INFO - Delete Columns ['TYPE', 'STATE', 'ADDRESS', 'MAIN_ADDRESS', 'ADMINISTRATIVE_AREA_LEVEL_2', 'STREET_NAME', 'LONG_NAME', 'FORMATTED_ADDRESS', 'BROKERTITLE', 'SUBLOCALITY']
+2025-11-07 20:53:44 - new_york_house_price - INFO - Drop Duplicate Value
+2025-11-07 20:53:44 - new_york_house_price - INFO - Change type int columns BATH and PROPERTYSQFT 
+2025-11-07 20:53:44 - new_york_house_price - INFO - Step 2: Preprocessing data
+2025-11-07 20:53:44 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-07 20:53:44 - new_york_house_price - INFO - Split Data. New features count: 6
+2025-11-07 20:53:44 - new_york_house_price - INFO - Saving preprocessor to models/preprocessing
+2025-11-07 20:53:44 - new_york_house_price - INFO - Data Has Been Format Coloumns Transformer
+2025-11-07 20:53:44 - new_york_house_price - INFO - Step 3: Train Grid Search CV and Evaluation
+2025-11-07 20:53:44 - new_york_house_price - INFO - Initialized Model Trainer with Experiment : new_york_house_prediction
+2025-11-07 20:53:44 - new_york_house_price - INFO - Starting training of all models
+2025-11-07 20:53:44 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 20:53:50 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4680503525376.0000
+2025-11-07 20:53:50 - new_york_house_price - INFO - Best parameters: {'regressor__learning_rate': 0.05, 'regressor__max_depth': 6, 'regressor__n_estinamtor': 200}
+2025-11-07 20:53:53 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 20:54:04 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4002704437230.3198
+2025-11-07 20:54:04 - new_york_house_price - INFO - Best parameters: {'regressor__max_depth': 12, 'regressor__n_estimators': 300}
+2025-11-07 20:54:06 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 20:54:22 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4400447192033.9814
+2025-11-07 20:54:22 - new_york_house_price - INFO - Best parameters: {'regressor__learning_rate': 0.05, 'regressor__max_depth': 6, 'regressor__n_estimators': 100}
+2025-11-07 20:54:24 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 20:54:25 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4989720004770.9219
+2025-11-07 20:54:25 - new_york_house_price - INFO - Best parameters: {'regressor__max_depth': 8}
+2025-11-07 20:54:27 - new_york_house_price - INFO - Completed Train Grid Search CV
+2025-11-07 20:54:27 - new_york_house_price - INFO - Selecting Best Model
+2025-11-07 20:54:27 - new_york_house_price - INFO - {'XGB_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(transformers=[('scale', StandardScaler(),
+                                                  ['PROPERTYSQFT', 'LATITUDE',
+                                                   'LONGITUDE', 'BATH',
+                                                   'BEDS']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 XGBRegressor(base_score=None, booster=None, callbacks=None,
+                              colsample_bylevel=None, colsample_bynode=None,
+                              colsample_bytree=None, devic...
+                              feature_types=None, feature_weights=None,
+                              gamma=None, grow_policy=None,
+                              importance_type=None,
+                              interaction_constraints=None, learning_rate=0.05,
+                              max_bin=None, max_cat_threshold=None,
+                              max_cat_to_onehot=None, max_delta_step=None,
+                              max_depth=6, max_leaves=None,
+                              min_child_weight=None, missing=nan,
+                              monotone_constraints=None, multi_strategy=None,
+                              n_estimators=None, n_estinamtor=200, n_jobs=None, ...))]), 'metrics': {'MAE': 791624.4375, 'RMSE': 7547382136832.0, 'R2_SCORE': 0.23925942182540894}}, 'Random_Forest_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(transformers=[('scale', StandardScaler(),
+                                                  ['PROPERTYSQFT', 'LATITUDE',
+                                                   'LONGITUDE', 'BATH',
+                                                   'BEDS']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 RandomForestRegressor(max_depth=12, n_estimators=300,
+                                       random_state=42))]), 'metrics': {'MAE': 792062.5454620544, 'RMSE': 7279514453418.446, 'R2_SCORE': 0.3234099680635959}}, 'Gradient_Boosting_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(transformers=[('scale', StandardScaler(),
+                                                  ['PROPERTYSQFT', 'LATITUDE',
+                                                   'LONGITUDE', 'BATH',
+                                                   'BEDS']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 GradientBoostingRegressor(learning_rate=0.05, max_depth=6,
+                                           random_state=42))]), 'metrics': {'MAE': 788425.7777931404, 'RMSE': 7223138873041.173, 'R2_SCORE': 0.28167773334929125}}, 'Decision_Tree_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(transformers=[('scale', StandardScaler(),
+                                                  ['PROPERTYSQFT', 'LATITUDE',
+                                                   'LONGITUDE', 'BATH',
+                                                   'BEDS']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 DecisionTreeRegressor(max_depth=8, random_state=42))]), 'metrics': {'MAE': 960632.3651013569, 'RMSE': 9079049321560.973, 'R2_SCORE': 0.2941486693198794}}}
+2025-11-07 20:54:27 - new_york_house_price - INFO - Selected Random_Forest_Regressor as best model
+2025-11-07 20:54:27 - new_york_house_price - INFO - Best Model Metrics :  {'MAE': 792062.5454620544, 'RMSE': 7279514453418.446, 'R2_SCORE': 0.3234099680635959}
+2025-11-07 20:54:27 - new_york_house_price - INFO - Completed Training all Models
+2025-11-07 20:54:27 - new_york_house_price - INFO - Step 4 : Log Best and Model Info
+2025-11-07 20:54:27 - new_york_house_price - INFO - Pipeline execution completed successfully
+2025-11-07 20:58:12 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-07 20:58:12 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-07 20:58:12 - new_york_house_price - INFO - Deleted existing MLflow database
+2025-11-07 20:58:12 - new_york_house_price - INFO - Starting pipeline execution
+2025-11-07 20:58:13 - new_york_house_price - INFO - MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-11-07 20:58:13 - new_york_house_price - INFO - Experiment name: new_york_house_prediction
+2025-11-07 20:58:14 - new_york_house_price - INFO - Started pipeline run with ID: b690e787ff6041d292c1f13c4ebce953
+2025-11-07 20:58:14 - new_york_house_price - INFO - Step 1: Loading data
+2025-11-07 20:58:14 - new_york_house_price - INFO - Initialized Dataloader with path : /home/mahindra/Downloads/python/dibimbing/MlopsMahindraDay1/data/NY-House_dataset.csv
+2025-11-07 20:58:14 - new_york_house_price - INFO - Loading data from csv
+2025-11-07 20:58:14 - new_york_house_price - INFO - Data Successfully Load
+2025-11-07 20:58:14 - new_york_house_price - INFO - Validate Data 
+2025-11-07 20:58:14 - new_york_house_price - INFO - Delete Outlier Value...
+2025-11-07 20:58:14 - new_york_house_price - INFO - Delete Columns ['TYPE', 'STATE', 'ADDRESS', 'MAIN_ADDRESS', 'ADMINISTRATIVE_AREA_LEVEL_2', 'STREET_NAME', 'LONG_NAME', 'FORMATTED_ADDRESS', 'BROKERTITLE', 'SUBLOCALITY']
+2025-11-07 20:58:14 - new_york_house_price - INFO - Drop Duplicate Value
+2025-11-07 20:58:14 - new_york_house_price - INFO - Change type int columns BATH and PROPERTYSQFT 
+2025-11-07 20:58:14 - new_york_house_price - INFO - Step 2: Preprocessing data
+2025-11-07 20:58:14 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-07 20:58:14 - new_york_house_price - INFO - Split Data. New features count: 6
+2025-11-07 20:58:14 - new_york_house_price - INFO - Saving preprocessor to models/preprocessing
+2025-11-07 20:58:14 - new_york_house_price - INFO - Data Has Been Format Coloumns Transformer
+2025-11-07 20:58:14 - new_york_house_price - INFO - Step 3: Train Grid Search CV and Evaluation
+2025-11-07 20:58:14 - new_york_house_price - INFO - Initialized Model Trainer with Experiment : new_york_house_prediction
+2025-11-07 20:58:14 - new_york_house_price - INFO - Starting training of all models
+2025-11-07 20:58:14 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 20:58:19 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4680503525376.0000
+2025-11-07 20:58:19 - new_york_house_price - INFO - Best parameters: {'regressor__learning_rate': 0.05, 'regressor__max_depth': 6, 'regressor__n_estinamtor': 200}
+2025-11-07 20:58:21 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 20:58:34 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4002704437230.3198
+2025-11-07 20:58:34 - new_york_house_price - INFO - Best parameters: {'regressor__max_depth': 12, 'regressor__n_estimators': 300}
+2025-11-07 20:58:36 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 20:58:52 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4400447192033.9814
+2025-11-07 20:58:52 - new_york_house_price - INFO - Best parameters: {'regressor__learning_rate': 0.05, 'regressor__max_depth': 6, 'regressor__n_estimators': 100}
+2025-11-07 20:58:54 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 20:58:55 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4989720004770.9219
+2025-11-07 20:58:55 - new_york_house_price - INFO - Best parameters: {'regressor__max_depth': 8}
+2025-11-07 20:58:57 - new_york_house_price - INFO - Completed Train Grid Search CV
+2025-11-07 20:58:57 - new_york_house_price - INFO - Selecting Best Model
+2025-11-07 20:58:57 - new_york_house_price - INFO - {'XGB_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(transformers=[('scale', StandardScaler(),
+                                                  ['PROPERTYSQFT', 'LATITUDE',
+                                                   'LONGITUDE', 'BATH',
+                                                   'BEDS']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 XGBRegressor(base_score=None, booster=None, callbacks=None,
+                              colsample_bylevel=None, colsample_bynode=None,
+                              colsample_bytree=None, devic...
+                              feature_types=None, feature_weights=None,
+                              gamma=None, grow_policy=None,
+                              importance_type=None,
+                              interaction_constraints=None, learning_rate=0.05,
+                              max_bin=None, max_cat_threshold=None,
+                              max_cat_to_onehot=None, max_delta_step=None,
+                              max_depth=6, max_leaves=None,
+                              min_child_weight=None, missing=nan,
+                              monotone_constraints=None, multi_strategy=None,
+                              n_estimators=None, n_estinamtor=200, n_jobs=None, ...))]), 'metrics': {'MAE': 791624.4375, 'RMSE': 7547382136832.0, 'R2_SCORE': 0.23925942182540894}}, 'Random_Forest_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(transformers=[('scale', StandardScaler(),
+                                                  ['PROPERTYSQFT', 'LATITUDE',
+                                                   'LONGITUDE', 'BATH',
+                                                   'BEDS']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 RandomForestRegressor(max_depth=12, n_estimators=300,
+                                       random_state=42))]), 'metrics': {'MAE': 792062.5454620544, 'RMSE': 7279514453418.446, 'R2_SCORE': 0.3234099680635959}}, 'Gradient_Boosting_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(transformers=[('scale', StandardScaler(),
+                                                  ['PROPERTYSQFT', 'LATITUDE',
+                                                   'LONGITUDE', 'BATH',
+                                                   'BEDS']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 GradientBoostingRegressor(learning_rate=0.05, max_depth=6,
+                                           random_state=42))]), 'metrics': {'MAE': 788425.7777931404, 'RMSE': 7223138873041.173, 'R2_SCORE': 0.28167773334929125}}, 'Decision_Tree_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(transformers=[('scale', StandardScaler(),
+                                                  ['PROPERTYSQFT', 'LATITUDE',
+                                                   'LONGITUDE', 'BATH',
+                                                   'BEDS']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 DecisionTreeRegressor(max_depth=8, random_state=42))]), 'metrics': {'MAE': 960632.3651013569, 'RMSE': 9079049321560.973, 'R2_SCORE': 0.2941486693198794}}}
+2025-11-07 20:58:57 - new_york_house_price - INFO - Selected Random_Forest_Regressor as best model
+2025-11-07 20:58:57 - new_york_house_price - INFO - Best Model Metrics :  {'MAE': 792062.5454620544, 'RMSE': 7279514453418.446, 'R2_SCORE': 0.3234099680635959}
+2025-11-07 20:58:57 - new_york_house_price - INFO - Completed Training all Models
+2025-11-07 20:58:57 - new_york_house_price - INFO - Step 4 : Log Best and Model Info
+2025-11-07 20:58:57 - new_york_house_price - INFO - Pipeline execution completed successfully
+2025-11-07 21:22:29 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-07 21:22:29 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-07 21:22:29 - new_york_house_price - INFO - Deleted existing MLflow database
+2025-11-07 21:22:29 - new_york_house_price - INFO - Starting pipeline execution
+2025-11-07 21:22:30 - new_york_house_price - INFO - MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-11-07 21:22:30 - new_york_house_price - INFO - Experiment name: new_york_house_prediction
+2025-11-07 21:22:30 - new_york_house_price - INFO - Started pipeline run with ID: 2c03ad2ee45048aa928c4bc4f190e4e2
+2025-11-07 21:22:30 - new_york_house_price - INFO - Step 1: Loading data
+2025-11-07 21:22:30 - new_york_house_price - INFO - Initialized Dataloader with path : /home/mahindra/Downloads/python/dibimbing/MlopsMahindraDay1/data/NY-House_dataset.csv
+2025-11-07 21:22:30 - new_york_house_price - INFO - Loading data from csv
+2025-11-07 21:22:30 - new_york_house_price - INFO - Data Successfully Load
+2025-11-07 21:22:30 - new_york_house_price - INFO - Validate Data 
+2025-11-07 21:22:30 - new_york_house_price - INFO - Delete Outlier Value...
+2025-11-07 21:22:30 - new_york_house_price - INFO - Delete Columns ['TYPE', 'STATE', 'ADDRESS', 'MAIN_ADDRESS', 'ADMINISTRATIVE_AREA_LEVEL_2', 'STREET_NAME', 'LONG_NAME', 'FORMATTED_ADDRESS', 'BROKERTITLE', 'SUBLOCALITY']
+2025-11-07 21:22:30 - new_york_house_price - INFO - Drop Duplicate Value
+2025-11-07 21:22:30 - new_york_house_price - INFO - Change type int columns BATH and PROPERTYSQFT 
+2025-11-07 21:22:30 - new_york_house_price - INFO - Step 2: Preprocessing data
+2025-11-07 21:22:30 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-07 21:22:30 - new_york_house_price - INFO - Split Data. New features count: 6
+2025-11-07 21:22:30 - new_york_house_price - INFO - Saving preprocessor to models/preprocessing
+2025-11-07 21:22:30 - new_york_house_price - INFO - Data Has Been Format Coloumns Transformer
+2025-11-07 21:22:30 - new_york_house_price - INFO - Step 3: Train Grid Search CV and Evaluation
+2025-11-07 21:22:30 - new_york_house_price - INFO - Initialized Model Trainer with Experiment : new_york_house_prediction
+2025-11-07 21:22:30 - new_york_house_price - INFO - Starting training of all models
+2025-11-07 21:22:30 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 21:22:36 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4680503525376.0000
+2025-11-07 21:22:36 - new_york_house_price - INFO - Best parameters: {'regressor__learning_rate': 0.05, 'regressor__max_depth': 6, 'regressor__n_estinamtor': 200}
+2025-11-07 21:22:39 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 21:22:50 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4002704437230.3198
+2025-11-07 21:22:50 - new_york_house_price - INFO - Best parameters: {'regressor__max_depth': 12, 'regressor__n_estimators': 300}
+2025-11-07 21:22:53 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 21:23:11 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4400447192033.9814
+2025-11-07 21:23:11 - new_york_house_price - INFO - Best parameters: {'regressor__learning_rate': 0.05, 'regressor__max_depth': 6, 'regressor__n_estimators': 100}
+2025-11-07 21:23:14 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 21:23:14 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4989720004770.9219
+2025-11-07 21:23:14 - new_york_house_price - INFO - Best parameters: {'regressor__max_depth': 8}
+2025-11-07 21:23:17 - new_york_house_price - INFO - Completed Train Grid Search CV
+2025-11-07 21:23:17 - new_york_house_price - INFO - Selecting Best Model
+2025-11-07 21:23:17 - new_york_house_price - INFO - {'XGB_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(transformers=[('scale', StandardScaler(),
+                                                  ['PROPERTYSQFT', 'LATITUDE',
+                                                   'LONGITUDE', 'BATH',
+                                                   'BEDS']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 XGBRegressor(base_score=None, booster=None, callbacks=None,
+                              colsample_bylevel=None, colsample_bynode=None,
+                              colsample_bytree=None, devic...
+                              feature_types=None, feature_weights=None,
+                              gamma=None, grow_policy=None,
+                              importance_type=None,
+                              interaction_constraints=None, learning_rate=0.05,
+                              max_bin=None, max_cat_threshold=None,
+                              max_cat_to_onehot=None, max_delta_step=None,
+                              max_depth=6, max_leaves=None,
+                              min_child_weight=None, missing=nan,
+                              monotone_constraints=None, multi_strategy=None,
+                              n_estimators=None, n_estinamtor=200, n_jobs=None, ...))]), 'metrics': {'MAE': 791624.4375, 'RMSE': 7547382136832.0, 'R2_SCORE': 0.23925942182540894}}, 'Random_Forest_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(transformers=[('scale', StandardScaler(),
+                                                  ['PROPERTYSQFT', 'LATITUDE',
+                                                   'LONGITUDE', 'BATH',
+                                                   'BEDS']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 RandomForestRegressor(max_depth=12, n_estimators=300,
+                                       random_state=42))]), 'metrics': {'MAE': 792062.5454620544, 'RMSE': 7279514453418.446, 'R2_SCORE': 0.3234099680635959}}, 'Gradient_Boosting_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(transformers=[('scale', StandardScaler(),
+                                                  ['PROPERTYSQFT', 'LATITUDE',
+                                                   'LONGITUDE', 'BATH',
+                                                   'BEDS']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 GradientBoostingRegressor(learning_rate=0.05, max_depth=6,
+                                           random_state=42))]), 'metrics': {'MAE': 788425.7777931404, 'RMSE': 7223138873041.173, 'R2_SCORE': 0.28167773334929125}}, 'Decision_Tree_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(transformers=[('scale', StandardScaler(),
+                                                  ['PROPERTYSQFT', 'LATITUDE',
+                                                   'LONGITUDE', 'BATH',
+                                                   'BEDS']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 DecisionTreeRegressor(max_depth=8, random_state=42))]), 'metrics': {'MAE': 960632.3651013569, 'RMSE': 9079049321560.973, 'R2_SCORE': 0.2941486693198794}}}
+2025-11-07 21:23:17 - new_york_house_price - INFO - Selected Random_Forest_Regressor as best model
+2025-11-07 21:23:17 - new_york_house_price - INFO - Best Model Metrics :  {'MAE': 792062.5454620544, 'RMSE': 7279514453418.446, 'R2_SCORE': 0.3234099680635959}
+2025-11-07 21:23:17 - new_york_house_price - INFO - Completed Training all Models
+2025-11-07 21:23:17 - new_york_house_price - INFO - Step 4 : Log Best and Model Info
+2025-11-07 21:23:17 - new_york_house_price - INFO - Pipeline execution completed successfully
+2025-11-07 22:16:57 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-07 22:16:57 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-07 22:16:57 - new_york_house_price - INFO - Deleted existing MLflow database
+2025-11-07 22:16:57 - new_york_house_price - INFO - Starting pipeline execution
+2025-11-07 22:16:58 - new_york_house_price - INFO - MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-11-07 22:16:58 - new_york_house_price - INFO - Experiment name: new_york_house_prediction
+2025-11-07 22:16:59 - new_york_house_price - INFO - Started pipeline run with ID: 6d4932f413354a53bb2994d6807d00bc
+2025-11-07 22:16:59 - new_york_house_price - INFO - Step 1: Loading data
+2025-11-07 22:16:59 - new_york_house_price - INFO - Initialized Dataloader with path : /home/mahindra/Downloads/python/dibimbing/MlopsMahindraDay1/data/NY-House_dataset.csv
+2025-11-07 22:16:59 - new_york_house_price - INFO - Loading data from csv
+2025-11-07 22:16:59 - new_york_house_price - INFO - Data Successfully Load
+2025-11-07 22:16:59 - new_york_house_price - INFO - Validate Data 
+2025-11-07 22:16:59 - new_york_house_price - INFO - Delete Outlier Value...
+2025-11-07 22:16:59 - new_york_house_price - INFO - Delete Columns ['TYPE', 'STATE', 'ADDRESS', 'MAIN_ADDRESS', 'ADMINISTRATIVE_AREA_LEVEL_2', 'STREET_NAME', 'LONG_NAME', 'FORMATTED_ADDRESS', 'BROKERTITLE', 'SUBLOCALITY']
+2025-11-07 22:16:59 - new_york_house_price - INFO - Drop Duplicate Value
+2025-11-07 22:16:59 - new_york_house_price - INFO - Change type int columns BATH and PROPERTYSQFT 
+2025-11-07 22:16:59 - new_york_house_price - INFO - Step 2: Preprocessing data
+2025-11-07 22:16:59 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-07 22:16:59 - new_york_house_price - INFO - Split Data. New features count: 6
+2025-11-07 22:16:59 - new_york_house_price - INFO - Saving preprocessor to models/preprocessing
+2025-11-07 22:16:59 - new_york_house_price - INFO - Data Has Been Format Coloumns Transformer
+2025-11-07 22:16:59 - new_york_house_price - INFO - Step 3: Train Grid Search CV and Evaluation
+2025-11-07 22:16:59 - new_york_house_price - INFO - Initialized Model Trainer with Experiment : new_york_house_prediction
+2025-11-07 22:16:59 - new_york_house_price - INFO - Starting training of all models
+2025-11-07 22:16:59 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 22:17:05 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4680503525376.0000
+2025-11-07 22:17:05 - new_york_house_price - INFO - Best parameters: {'regressor__learning_rate': 0.05, 'regressor__max_depth': 6, 'regressor__n_estinamtors': 200}
+2025-11-07 22:17:05 - new_york_house_price - ERROR - Error Train GridSearchCV : name 'full_pipeline' is not defined
+2025-11-07 22:17:05 - new_york_house_price - ERROR - Error Training Models : name 'full_pipeline' is not defined
+2025-11-07 22:17:05 - new_york_house_price - ERROR - Pipeline execution failed: name 'full_pipeline' is not defined
+2025-11-07 22:17:32 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-07 22:17:32 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-07 22:17:32 - new_york_house_price - INFO - Deleted existing MLflow database
+2025-11-07 22:17:32 - new_york_house_price - INFO - Starting pipeline execution
+2025-11-07 22:17:33 - new_york_house_price - INFO - MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-11-07 22:17:33 - new_york_house_price - INFO - Experiment name: new_york_house_prediction
+2025-11-07 22:17:33 - new_york_house_price - INFO - Started pipeline run with ID: b2adace432dc4b31acda9e47afa4d885
+2025-11-07 22:17:33 - new_york_house_price - INFO - Step 1: Loading data
+2025-11-07 22:17:33 - new_york_house_price - INFO - Initialized Dataloader with path : /home/mahindra/Downloads/python/dibimbing/MlopsMahindraDay1/data/NY-House_dataset.csv
+2025-11-07 22:17:33 - new_york_house_price - INFO - Loading data from csv
+2025-11-07 22:17:33 - new_york_house_price - INFO - Data Successfully Load
+2025-11-07 22:17:33 - new_york_house_price - INFO - Validate Data 
+2025-11-07 22:17:33 - new_york_house_price - INFO - Delete Outlier Value...
+2025-11-07 22:17:33 - new_york_house_price - INFO - Delete Columns ['TYPE', 'STATE', 'ADDRESS', 'MAIN_ADDRESS', 'ADMINISTRATIVE_AREA_LEVEL_2', 'STREET_NAME', 'LONG_NAME', 'FORMATTED_ADDRESS', 'BROKERTITLE', 'SUBLOCALITY']
+2025-11-07 22:17:33 - new_york_house_price - INFO - Drop Duplicate Value
+2025-11-07 22:17:33 - new_york_house_price - INFO - Change type int columns BATH and PROPERTYSQFT 
+2025-11-07 22:17:33 - new_york_house_price - INFO - Step 2: Preprocessing data
+2025-11-07 22:17:33 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-07 22:17:33 - new_york_house_price - INFO - Split Data. New features count: 6
+2025-11-07 22:17:33 - new_york_house_price - INFO - Saving preprocessor to models/preprocessing
+2025-11-07 22:17:33 - new_york_house_price - INFO - Data Has Been Format Coloumns Transformer
+2025-11-07 22:17:33 - new_york_house_price - INFO - Step 3: Train Grid Search CV and Evaluation
+2025-11-07 22:17:33 - new_york_house_price - INFO - Initialized Model Trainer with Experiment : new_york_house_prediction
+2025-11-07 22:17:33 - new_york_house_price - INFO - Starting training of all models
+2025-11-07 22:17:33 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 22:17:39 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4680503525376.0000
+2025-11-07 22:17:39 - new_york_house_price - INFO - Best parameters: {'regressor__learning_rate': 0.05, 'regressor__max_depth': 6, 'regressor__n_estinamtors': 200}
+2025-11-07 22:17:43 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 22:17:56 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4002704437230.3198
+2025-11-07 22:17:56 - new_york_house_price - INFO - Best parameters: {'regressor__max_depth': 12, 'regressor__n_estimators': 300}
+2025-11-07 22:18:00 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 22:18:18 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4400447192033.9814
+2025-11-07 22:18:18 - new_york_house_price - INFO - Best parameters: {'regressor__learning_rate': 0.05, 'regressor__max_depth': 6, 'regressor__n_estimators': 100}
+2025-11-07 22:18:21 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-07 22:18:21 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4989720004770.9219
+2025-11-07 22:18:21 - new_york_house_price - INFO - Best parameters: {'regressor__max_depth': 8}
+2025-11-07 22:18:24 - new_york_house_price - INFO - Completed Train Grid Search CV
+2025-11-07 22:18:24 - new_york_house_price - INFO - Selecting Best Model
+2025-11-07 22:18:24 - new_york_house_price - INFO - {'XGB_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(transformers=[('scale', StandardScaler(),
+                                                  ['PROPERTYSQFT', 'LATITUDE',
+                                                   'LONGITUDE', 'BATH',
+                                                   'BEDS']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 XGBRegressor(base_score=None, booster=None, callbacks=None,
+                              colsample_bylevel=None, colsample_bynode=None,
+                              colsample_bytree=None, devic...
+                              feature_types=None, feature_weights=None,
+                              gamma=None, grow_policy=None,
+                              importance_type=None,
+                              interaction_constraints=None, learning_rate=0.05,
+                              max_bin=None, max_cat_threshold=None,
+                              max_cat_to_onehot=None, max_delta_step=None,
+                              max_depth=6, max_leaves=None,
+                              min_child_weight=None, missing=nan,
+                              monotone_constraints=None, multi_strategy=None,
+                              n_estimators=None, n_estinamtors=200, n_jobs=None, ...))]), 'metrics': {'MAE': 858183.9375, 'RMSE': 8064901054464.0, 'R2_SCORE': 0.3437926769256592}}, 'Random_Forest_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(transformers=[('scale', StandardScaler(),
+                                                  ['PROPERTYSQFT', 'LATITUDE',
+                                                   'LONGITUDE', 'BATH',
+                                                   'BEDS']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 RandomForestRegressor(max_depth=12, n_estimators=300,
+                                       random_state=42))]), 'metrics': {'MAE': 791197.6380926216, 'RMSE': 7301121156651.446, 'R2_SCORE': 0.3203963861192468}}, 'Gradient_Boosting_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(transformers=[('scale', StandardScaler(),
+                                                  ['PROPERTYSQFT', 'LATITUDE',
+                                                   'LONGITUDE', 'BATH',
+                                                   'BEDS']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 GradientBoostingRegressor(learning_rate=0.05, max_depth=6,
+                                           random_state=42))]), 'metrics': {'MAE': 865473.6330160142, 'RMSE': 7626376076962.155, 'R2_SCORE': 0.16090213356157612}}, 'Decision_Tree_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(transformers=[('scale', StandardScaler(),
+                                                  ['PROPERTYSQFT', 'LATITUDE',
+                                                   'LONGITUDE', 'BATH',
+                                                   'BEDS']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 DecisionTreeRegressor(max_depth=8, random_state=42))]), 'metrics': {'MAE': 963611.2626373626, 'RMSE': 9305908299173.594, 'R2_SCORE': 0.3253933155633355}}}
+2025-11-07 22:18:24 - new_york_house_price - INFO - Selected XGB_Regressor as best model
+2025-11-07 22:18:24 - new_york_house_price - INFO - Best Model Metrics :  {'MAE': 858183.9375, 'RMSE': 8064901054464.0, 'R2_SCORE': 0.3437926769256592}
+2025-11-07 22:18:24 - new_york_house_price - INFO - Completed Training all Models
+2025-11-07 22:18:24 - new_york_house_price - INFO - Step 4 : Log Best and Model Info
+2025-11-07 22:18:24 - new_york_house_price - INFO - Pipeline execution completed successfully
+2025-11-07 23:55:45 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-07 23:55:45 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-07 23:55:46 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-07 23:55:48 - new_york_house_price - ERROR - Error loading Production model: Registered Model with name=XGBRegressor_best_model not found
+2025-11-07 23:55:48 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Registered Model with name=XGBRegressor_best_model not found
+2025-11-07 23:56:43 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-07 23:56:43 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-07 23:56:44 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-07 23:56:45 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 020f9c5bf2e64fd591c134d0baca486d
+2025-11-07 23:56:46 - new_york_house_price - ERROR - Error loading Production model: Failed to download artifacts from path 'model', please ensure that the path is correct.
+2025-11-07 23:56:46 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Failed to download artifacts from path 'model', please ensure that the path is correct.
+2025-11-07 23:57:11 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-07 23:57:11 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-07 23:57:12 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-07 23:57:13 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 020f9c5bf2e64fd591c134d0baca486d
+2025-11-07 23:57:14 - new_york_house_price - ERROR - Error loading Production model: Failed to download artifacts from path 'model', please ensure that the path is correct.
+2025-11-07 23:57:14 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Failed to download artifacts from path 'model', please ensure that the path is correct.
