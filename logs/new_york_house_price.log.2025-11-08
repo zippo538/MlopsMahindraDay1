@@ -1,0 +1,503 @@
+2025-11-08 00:00:34 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:00:34 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:00:35 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:00:36 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 020f9c5bf2e64fd591c134d0baca486d
+2025-11-08 00:00:36 - new_york_house_price - ERROR - Error loading Production model: Failed to download artifacts from path 'models', please ensure that the path is correct.
+2025-11-08 00:00:36 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Failed to download artifacts from path 'models', please ensure that the path is correct.
+2025-11-08 00:02:49 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:02:49 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:02:50 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:02:52 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 020f9c5bf2e64fd591c134d0baca486d
+2025-11-08 00:02:52 - new_york_house_price - ERROR - Error loading Production model: Run with id=1 not found
+2025-11-08 00:02:52 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Run with id=1 not found
+2025-11-08 00:03:08 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:03:08 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:03:08 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:03:10 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 020f9c5bf2e64fd591c134d0baca486d
+2025-11-08 00:03:11 - new_york_house_price - ERROR - Error loading Production model: Run with id=1 not found
+2025-11-08 00:03:11 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Run with id=1 not found
+2025-11-08 00:03:17 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:03:17 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:03:18 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:03:19 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 020f9c5bf2e64fd591c134d0baca486d
+2025-11-08 00:03:20 - new_york_house_price - ERROR - Error loading Production model: Run with id=1 not found
+2025-11-08 00:03:20 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Run with id=1 not found
+2025-11-08 00:03:49 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:03:49 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:03:50 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:03:52 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 020f9c5bf2e64fd591c134d0baca486d
+2025-11-08 00:03:53 - new_york_house_price - ERROR - Error loading Production model: Failed to download artifacts from path 'models', please ensure that the path is correct.
+2025-11-08 00:03:53 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Failed to download artifacts from path 'models', please ensure that the path is correct.
+2025-11-08 00:08:22 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:08:22 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:08:23 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:08:25 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 020f9c5bf2e64fd591c134d0baca486d
+2025-11-08 00:08:26 - new_york_house_price - ERROR - Error loading Production model: Failed to download artifacts from path 'models', please ensure that the path is correct.
+2025-11-08 00:08:26 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Failed to download artifacts from path 'models', please ensure that the path is correct.
+2025-11-08 00:08:41 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:08:41 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:08:43 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:08:44 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 020f9c5bf2e64fd591c134d0baca486d
+2025-11-08 00:08:45 - new_york_house_price - ERROR - Error loading Production model: Failed to download artifacts from path 'models', please ensure that the path is correct.
+2025-11-08 00:08:45 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Failed to download artifacts from path 'models', please ensure that the path is correct.
+2025-11-08 00:08:47 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:08:47 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:08:48 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:08:49 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 020f9c5bf2e64fd591c134d0baca486d
+2025-11-08 00:08:49 - new_york_house_price - ERROR - Error loading Production model: Failed to download artifacts from path 'models', please ensure that the path is correct.
+2025-11-08 00:08:49 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Failed to download artifacts from path 'models', please ensure that the path is correct.
+2025-11-08 00:09:01 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:09:01 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:09:02 - new_york_house_price - INFO - Deleted existing MLflow database
+2025-11-08 00:09:02 - new_york_house_price - INFO - Starting pipeline execution
+2025-11-08 00:09:04 - new_york_house_price - INFO - MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-11-08 00:09:04 - new_york_house_price - INFO - Experiment name: new_york_house_prediction
+2025-11-08 00:09:04 - new_york_house_price - INFO - Started pipeline run with ID: c86a4790fd5a40baae8c275008d2863c
+2025-11-08 00:09:04 - new_york_house_price - INFO - Step 1: Loading data
+2025-11-08 00:09:04 - new_york_house_price - INFO - Initialized Dataloader with path : /home/mahindra/Downloads/python/dibimbing/MlopsMahindraDay1/data/NY-House_dataset.csv
+2025-11-08 00:09:04 - new_york_house_price - INFO - Loading data from csv
+2025-11-08 00:09:04 - new_york_house_price - INFO - Data Successfully Load
+2025-11-08 00:09:04 - new_york_house_price - INFO - Validate Data 
+2025-11-08 00:09:04 - new_york_house_price - INFO - Delete Outlier Value...
+2025-11-08 00:09:04 - new_york_house_price - INFO - Delete Columns ['TYPE', 'STATE', 'ADDRESS', 'MAIN_ADDRESS', 'ADMINISTRATIVE_AREA_LEVEL_2', 'STREET_NAME', 'LONG_NAME', 'FORMATTED_ADDRESS', 'BROKERTITLE', 'SUBLOCALITY']
+2025-11-08 00:09:04 - new_york_house_price - INFO - Drop Duplicate Value
+2025-11-08 00:09:04 - new_york_house_price - INFO - Change type int columns BATH and PROPERTYSQFT 
+2025-11-08 00:09:04 - new_york_house_price - INFO - Step 2: Preprocessing data
+2025-11-08 00:09:04 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-08 00:09:04 - new_york_house_price - INFO - Split Data. New features count: 6
+2025-11-08 00:09:04 - new_york_house_price - INFO - Saving preprocessor to models/preprocessing
+2025-11-08 00:09:04 - new_york_house_price - INFO - Data Has Been Format Coloumns Transformer
+2025-11-08 00:09:04 - new_york_house_price - INFO - Step 3: Train Grid Search CV and Evaluation
+2025-11-08 00:09:04 - new_york_house_price - INFO - Initialized Model Trainer with Experiment : new_york_house_prediction
+2025-11-08 00:09:04 - new_york_house_price - INFO - Starting training of all models
+2025-11-08 00:09:04 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-08 00:09:13 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4680503525376.0000
+2025-11-08 00:09:13 - new_york_house_price - INFO - Best parameters: {'regressor__learning_rate': 0.05, 'regressor__max_depth': 6, 'regressor__n_estinamtors': 200}
+2025-11-08 00:09:15 - new_york_house_price - ERROR - Error Training Models : log_model() got multiple values for argument 'artifact_path'
+2025-11-08 00:09:15 - new_york_house_price - ERROR - Pipeline execution failed: log_model() got multiple values for argument 'artifact_path'
+2025-11-08 00:13:16 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:13:16 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:13:17 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:13:18 - new_york_house_price - ERROR - Error loading Production model: Registered Model with name=XGB_Regressor_best_model not found
+2025-11-08 00:13:18 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Registered Model with name=XGB_Regressor_best_model not found
+2025-11-08 00:14:04 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:14:04 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:14:04 - new_york_house_price - INFO - Deleted existing MLflow database
+2025-11-08 00:14:04 - new_york_house_price - INFO - Starting pipeline execution
+2025-11-08 00:14:07 - new_york_house_price - INFO - MLflow setup completed. Tracking URI: sqlite:///mlflow.db
+2025-11-08 00:14:07 - new_york_house_price - INFO - Experiment name: new_york_house_prediction
+2025-11-08 00:14:07 - new_york_house_price - INFO - Started pipeline run with ID: 6035218d159340cb94a10eaf216204bc
+2025-11-08 00:14:07 - new_york_house_price - INFO - Step 1: Loading data
+2025-11-08 00:14:07 - new_york_house_price - INFO - Initialized Dataloader with path : /home/mahindra/Downloads/python/dibimbing/MlopsMahindraDay1/data/NY-House_dataset.csv
+2025-11-08 00:14:07 - new_york_house_price - INFO - Loading data from csv
+2025-11-08 00:14:07 - new_york_house_price - INFO - Data Successfully Load
+2025-11-08 00:14:07 - new_york_house_price - INFO - Validate Data 
+2025-11-08 00:14:07 - new_york_house_price - INFO - Delete Outlier Value...
+2025-11-08 00:14:07 - new_york_house_price - INFO - Delete Columns ['TYPE', 'STATE', 'ADDRESS', 'MAIN_ADDRESS', 'ADMINISTRATIVE_AREA_LEVEL_2', 'STREET_NAME', 'LONG_NAME', 'FORMATTED_ADDRESS', 'BROKERTITLE', 'SUBLOCALITY']
+2025-11-08 00:14:07 - new_york_house_price - INFO - Drop Duplicate Value
+2025-11-08 00:14:07 - new_york_house_price - INFO - Change type int columns BATH and PROPERTYSQFT 
+2025-11-08 00:14:07 - new_york_house_price - INFO - Step 2: Preprocessing data
+2025-11-08 00:14:07 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-08 00:14:07 - new_york_house_price - INFO - Split Data. New features count: 6
+2025-11-08 00:14:07 - new_york_house_price - INFO - Saving preprocessor to models/preprocessing
+2025-11-08 00:14:07 - new_york_house_price - INFO - Data Has Been Format Coloumns Transformer
+2025-11-08 00:14:07 - new_york_house_price - INFO - Step 3: Train Grid Search CV and Evaluation
+2025-11-08 00:14:07 - new_york_house_price - INFO - Initialized Model Trainer with Experiment : new_york_house_prediction
+2025-11-08 00:14:07 - new_york_house_price - INFO - Starting training of all models
+2025-11-08 00:14:07 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-08 00:14:15 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4680503525376.0000
+2025-11-08 00:14:15 - new_york_house_price - INFO - Best parameters: {'regressor__learning_rate': 0.05, 'regressor__max_depth': 6, 'regressor__n_estinamtors': 200}
+2025-11-08 00:14:22 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-08 00:14:46 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4002704437230.3198
+2025-11-08 00:14:46 - new_york_house_price - INFO - Best parameters: {'regressor__max_depth': 12, 'regressor__n_estimators': 300}
+2025-11-08 00:14:53 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-08 00:15:32 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4400447192033.9814
+2025-11-08 00:15:32 - new_york_house_price - INFO - Best parameters: {'regressor__learning_rate': 0.05, 'regressor__max_depth': 6, 'regressor__n_estimators': 100}
+2025-11-08 00:15:37 - new_york_house_price - INFO - Starting Model GridSearchCV....
+2025-11-08 00:15:37 - new_york_house_price - INFO - GridSearchCV completed. Best score: -4989720004770.9219
+2025-11-08 00:15:37 - new_york_house_price - INFO - Best parameters: {'regressor__max_depth': 8}
+2025-11-08 00:15:41 - new_york_house_price - INFO - Completed Train Grid Search CV
+2025-11-08 00:15:41 - new_york_house_price - INFO - Selecting Best Model
+2025-11-08 00:15:41 - new_york_house_price - INFO - {'XGB_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(transformers=[('scale', StandardScaler(),
+                                                  ['PROPERTYSQFT', 'LATITUDE',
+                                                   'LONGITUDE', 'BATH',
+                                                   'BEDS']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 XGBRegressor(base_score=None, booster=None, callbacks=None,
+                              colsample_bylevel=None, colsample_bynode=None,
+                              colsample_bytree=None, devic...
+                              feature_types=None, feature_weights=None,
+                              gamma=None, grow_policy=None,
+                              importance_type=None,
+                              interaction_constraints=None, learning_rate=0.05,
+                              max_bin=None, max_cat_threshold=None,
+                              max_cat_to_onehot=None, max_delta_step=None,
+                              max_depth=6, max_leaves=None,
+                              min_child_weight=None, missing=nan,
+                              monotone_constraints=None, multi_strategy=None,
+                              n_estimators=None, n_estinamtors=200, n_jobs=None, ...))]), 'metrics': {'MAE': 858183.9375, 'RMSE': 8064901054464.0, 'R2_SCORE': 0.3437926769256592}, 'run_id': '743f839a3ac24079aff21bb5e4f6e42d'}, 'Random_Forest_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(transformers=[('scale', StandardScaler(),
+                                                  ['PROPERTYSQFT', 'LATITUDE',
+                                                   'LONGITUDE', 'BATH',
+                                                   'BEDS']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 RandomForestRegressor(max_depth=12, n_estimators=300,
+                                       random_state=42))]), 'metrics': {'MAE': 791197.6380926216, 'RMSE': 7301121156651.446, 'R2_SCORE': 0.3203963861192468}, 'run_id': '716d4f7e381945568b576655a523f1fa'}, 'Gradient_Boosting_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(transformers=[('scale', StandardScaler(),
+                                                  ['PROPERTYSQFT', 'LATITUDE',
+                                                   'LONGITUDE', 'BATH',
+                                                   'BEDS']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 GradientBoostingRegressor(learning_rate=0.05, max_depth=6,
+                                           random_state=42))]), 'metrics': {'MAE': 865473.6330160142, 'RMSE': 7626376076962.155, 'R2_SCORE': 0.16090213356157612}, 'run_id': '6c69541d79d54f09ba2ff7678b535e5a'}, 'Decision_Tree_Regressor': {'model': Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(transformers=[('scale', StandardScaler(),
+                                                  ['PROPERTYSQFT', 'LATITUDE',
+                                                   'LONGITUDE', 'BATH',
+                                                   'BEDS']),
+                                                 ('ohe',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['LOCALITY'])])),
+                ('regressor',
+                 DecisionTreeRegressor(max_depth=8, random_state=42))]), 'metrics': {'MAE': 963611.2626373626, 'RMSE': 9305908299173.594, 'R2_SCORE': 0.3253933155633355}, 'run_id': '354f62858ab943618631b0747e72be78'}}
+2025-11-08 00:15:41 - new_york_house_price - INFO - Selected XGB_Regressor as best model
+2025-11-08 00:15:41 - new_york_house_price - INFO - Best Model Metrics :  {'MAE': 858183.9375, 'RMSE': 8064901054464.0, 'R2_SCORE': 0.3437926769256592}
+2025-11-08 00:15:42 - new_york_house_price - INFO - Completed Training all Models
+2025-11-08 00:15:42 - new_york_house_price - INFO - Step 4 : Log Best and Model Info
+2025-11-08 00:15:42 - new_york_house_price - INFO - Pipeline execution completed successfully
+2025-11-08 00:15:57 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:15:57 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:15:58 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:15:59 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:16:00 - new_york_house_price - ERROR - Error loading Production model: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+2025-11-08 00:16:00 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+2025-11-08 00:20:09 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:20:09 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:20:10 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:20:12 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:20:12 - new_york_house_price - INFO - Trying to load model from: runs:/743f839a3ac24079aff21bb5e4f6e42d/XGB_Regressor_best_model
+2025-11-08 00:20:13 - new_york_house_price - ERROR - Error loading model: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+2025-11-08 00:20:13 - new_york_house_price - INFO - Trying alternative path: runs:/743f839a3ac24079aff21bb5e4f6e42d/model
+2025-11-08 00:20:13 - new_york_house_price - ERROR - Error loading from alternative path: Failed to download artifacts from path 'model', please ensure that the path is correct.
+2025-11-08 00:20:13 - new_york_house_price - ERROR - Error loading from local path: name 'experiment' is not defined
+2025-11-08 00:20:13 - new_york_house_price - ERROR - Error loading Production model: Could not load model from any path. Errors:
+Primary: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+Alternative: Failed to download artifacts from path 'model', please ensure that the path is correct.
+Local: name 'experiment' is not defined
+2025-11-08 00:20:13 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Could not load model from any path. Errors:
+Primary: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+Alternative: Failed to download artifacts from path 'model', please ensure that the path is correct.
+Local: name 'experiment' is not defined
+2025-11-08 00:22:09 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:22:09 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:22:10 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:22:11 - new_york_house_price - ERROR - Error loading Production model: 'MlflowClient' object has no attribute 'client'
+2025-11-08 00:22:11 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: 'MlflowClient' object has no attribute 'client'
+2025-11-08 00:22:17 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:22:17 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:22:18 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:22:19 - new_york_house_price - ERROR - Error loading Production model: 'MlflowClient' object has no attribute 'client'
+2025-11-08 00:22:19 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: 'MlflowClient' object has no attribute 'client'
+2025-11-08 00:22:41 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:22:41 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:22:42 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:22:43 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:22:43 - new_york_house_price - INFO - Trying to load model from: runs:/743f839a3ac24079aff21bb5e4f6e42d/XGB_Regressor_best_model
+2025-11-08 00:22:44 - new_york_house_price - ERROR - Error loading model: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+2025-11-08 00:22:44 - new_york_house_price - INFO - Trying alternative path: runs:/743f839a3ac24079aff21bb5e4f6e42d/model
+2025-11-08 00:22:44 - new_york_house_price - ERROR - Error loading from alternative path: Failed to download artifacts from path 'model', please ensure that the path is correct.
+2025-11-08 00:22:44 - new_york_house_price - INFO - Trying local filesystem path: mlruns/1/743f839a3ac24079aff21bb5e4f6e42d/artifacts/model
+2025-11-08 00:22:44 - new_york_house_price - ERROR - Error loading from local path: Local path does not exist: mlruns/1/743f839a3ac24079aff21bb5e4f6e42d/artifacts/model
+2025-11-08 00:22:44 - new_york_house_price - ERROR - Error loading Production model: Could not load model from any path. Errors:
+Primary: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+Alternative: Failed to download artifacts from path 'model', please ensure that the path is correct.
+Local: Local path does not exist: mlruns/1/743f839a3ac24079aff21bb5e4f6e42d/artifacts/model
+2025-11-08 00:22:44 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Could not load model from any path. Errors:
+Primary: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+Alternative: Failed to download artifacts from path 'model', please ensure that the path is correct.
+Local: Local path does not exist: mlruns/1/743f839a3ac24079aff21bb5e4f6e42d/artifacts/model
+2025-11-08 00:24:34 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:24:34 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:24:35 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:24:36 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:24:36 - new_york_house_price - INFO - Trying to load model from: runs:/743f839a3ac24079aff21bb5e4f6e42d/XGB_Regressor_best_model
+2025-11-08 00:24:37 - new_york_house_price - ERROR - Error loading model: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+2025-11-08 00:24:37 - new_york_house_price - INFO - Trying alternative path: runs:/743f839a3ac24079aff21bb5e4f6e42d/model
+2025-11-08 00:24:37 - new_york_house_price - ERROR - Error loading from alternative path: Failed to download artifacts from path 'model', please ensure that the path is correct.
+2025-11-08 00:24:37 - new_york_house_price - INFO - Trying local filesystem path: mlruns/1/743f839a3ac24079aff21bb5e4f6e42d/models/artifacts
+2025-11-08 00:24:37 - new_york_house_price - ERROR - Error loading from local path: Local path does not exist: mlruns/1/743f839a3ac24079aff21bb5e4f6e42d/models/artifacts
+2025-11-08 00:24:37 - new_york_house_price - ERROR - Error loading Production model: Could not load model from any path. Errors:
+Primary: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+Alternative: Failed to download artifacts from path 'model', please ensure that the path is correct.
+Local: Local path does not exist: mlruns/1/743f839a3ac24079aff21bb5e4f6e42d/models/artifacts
+2025-11-08 00:24:37 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Could not load model from any path. Errors:
+Primary: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+Alternative: Failed to download artifacts from path 'model', please ensure that the path is correct.
+Local: Local path does not exist: mlruns/1/743f839a3ac24079aff21bb5e4f6e42d/models/artifacts
+2025-11-08 00:29:22 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:29:22 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:29:23 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:29:24 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:29:24 - new_york_house_price - INFO - Trying to load model from: runs:/743f839a3ac24079aff21bb5e4f6e42d/XGB_Regressor_best_model
+2025-11-08 00:29:25 - new_york_house_price - ERROR - Error loading model: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+2025-11-08 00:29:25 - new_york_house_price - INFO - Trying alternative path: runs:/743f839a3ac24079aff21bb5e4f6e42d/model
+2025-11-08 00:29:25 - new_york_house_price - ERROR - Error loading from alternative path: Failed to download artifacts from path 'model', please ensure that the path is correct.
+2025-11-08 00:29:25 - new_york_house_price - INFO - Trying local filesystem path: mlruns/1/743f839a3ac24079aff21bb5e4f6e42d/models
+2025-11-08 00:29:25 - new_york_house_price - ERROR - Error loading from local path: Local path does not exist: mlruns/1/743f839a3ac24079aff21bb5e4f6e42d/models
+2025-11-08 00:29:25 - new_york_house_price - ERROR - Error loading Production model: Could not load model from any path. Errors:
+Primary: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+Alternative: Failed to download artifacts from path 'model', please ensure that the path is correct.
+Local: Local path does not exist: mlruns/1/743f839a3ac24079aff21bb5e4f6e42d/models
+2025-11-08 00:29:25 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Could not load model from any path. Errors:
+Primary: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+Alternative: Failed to download artifacts from path 'model', please ensure that the path is correct.
+Local: Local path does not exist: mlruns/1/743f839a3ac24079aff21bb5e4f6e42d/models
+2025-11-08 00:30:43 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:30:43 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:30:44 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:30:45 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:30:45 - new_york_house_price - INFO - Trying to load model from: runs:/743f839a3ac24079aff21bb5e4f6e42d/XGB_Regressor_best_model
+2025-11-08 00:30:46 - new_york_house_price - ERROR - Error loading model: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+2025-11-08 00:30:46 - new_york_house_price - INFO - Trying alternative path: runs:/743f839a3ac24079aff21bb5e4f6e42d/model
+2025-11-08 00:30:46 - new_york_house_price - ERROR - Error loading from alternative path: Failed to download artifacts from path 'model', please ensure that the path is correct.
+2025-11-08 00:30:46 - new_york_house_price - INFO - Trying local filesystem path: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d/artifacts
+2025-11-08 00:30:46 - new_york_house_price - ERROR - Error loading from local path: Local path does not exist: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d/artifacts
+2025-11-08 00:30:46 - new_york_house_price - ERROR - Error loading Production model: Could not load model from any path. Errors:
+Primary: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+Alternative: Failed to download artifacts from path 'model', please ensure that the path is correct.
+Local: Local path does not exist: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d/artifacts
+2025-11-08 00:30:46 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Could not load model from any path. Errors:
+Primary: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+Alternative: Failed to download artifacts from path 'model', please ensure that the path is correct.
+Local: Local path does not exist: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d/artifacts
+2025-11-08 00:30:57 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:30:57 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:30:58 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:30:59 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:30:59 - new_york_house_price - INFO - Trying to load model from: runs:/743f839a3ac24079aff21bb5e4f6e42d/XGB_Regressor_best_model
+2025-11-08 00:31:00 - new_york_house_price - ERROR - Error loading model: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+2025-11-08 00:31:00 - new_york_house_price - INFO - Trying alternative path: runs:/743f839a3ac24079aff21bb5e4f6e42d/model
+2025-11-08 00:31:00 - new_york_house_price - ERROR - Error loading from alternative path: Failed to download artifacts from path 'model', please ensure that the path is correct.
+2025-11-08 00:31:00 - new_york_house_price - INFO - Trying local filesystem path: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:31:00 - new_york_house_price - ERROR - Error loading from local path: Local path does not exist: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:31:00 - new_york_house_price - ERROR - Error loading Production model: Could not load model from any path. Errors:
+Primary: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+Alternative: Failed to download artifacts from path 'model', please ensure that the path is correct.
+Local: Local path does not exist: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:31:00 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Could not load model from any path. Errors:
+Primary: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+Alternative: Failed to download artifacts from path 'model', please ensure that the path is correct.
+Local: Local path does not exist: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:31:39 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:31:39 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:31:40 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:31:41 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:31:41 - new_york_house_price - INFO - Trying to load model from: runs:/743f839a3ac24079aff21bb5e4f6e42d/XGB_Regressor_best_model
+2025-11-08 00:31:42 - new_york_house_price - ERROR - Error loading model: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+2025-11-08 00:31:42 - new_york_house_price - INFO - Trying alternative path: runs:/743f839a3ac24079aff21bb5e4f6e42d/model
+2025-11-08 00:31:42 - new_york_house_price - ERROR - Error loading from alternative path: Failed to download artifacts from path 'model', please ensure that the path is correct.
+2025-11-08 00:31:42 - new_york_house_price - INFO - Trying local filesystem path: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d/artifacts/model
+2025-11-08 00:31:42 - new_york_house_price - ERROR - Error loading from local path: Local path does not exist: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d/artifacts/model
+2025-11-08 00:31:42 - new_york_house_price - ERROR - Error loading Production model: Could not load model from any path. Errors:
+Primary: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+Alternative: Failed to download artifacts from path 'model', please ensure that the path is correct.
+Local: Local path does not exist: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d/artifacts/model
+2025-11-08 00:31:42 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Could not load model from any path. Errors:
+Primary: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+Alternative: Failed to download artifacts from path 'model', please ensure that the path is correct.
+Local: Local path does not exist: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d/artifacts/model
+2025-11-08 00:32:20 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:32:20 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:32:21 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:32:22 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:32:22 - new_york_house_price - INFO - Trying to load model from: runs:/743f839a3ac24079aff21bb5e4f6e42d/XGB_Regressor_best_model
+2025-11-08 00:32:23 - new_york_house_price - ERROR - Error loading model: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+2025-11-08 00:32:23 - new_york_house_price - INFO - Trying alternative path: runs:/743f839a3ac24079aff21bb5e4f6e42d/model
+2025-11-08 00:32:23 - new_york_house_price - ERROR - Error loading from alternative path: Failed to download artifacts from path 'model', please ensure that the path is correct.
+2025-11-08 00:32:23 - new_york_house_price - INFO - Trying local filesystem path: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d/artifacts/model.pkl
+2025-11-08 00:32:23 - new_york_house_price - ERROR - Error loading from local path: Local path does not exist: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d/artifacts/model.pkl
+2025-11-08 00:32:23 - new_york_house_price - ERROR - Error loading Production model: Could not load model from any path. Errors:
+Primary: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+Alternative: Failed to download artifacts from path 'model', please ensure that the path is correct.
+Local: Local path does not exist: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d/artifacts/model.pkl
+2025-11-08 00:32:23 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Could not load model from any path. Errors:
+Primary: Failed to download artifacts from path 'XGB_Regressor_best_model', please ensure that the path is correct.
+Alternative: Failed to download artifacts from path 'model', please ensure that the path is correct.
+Local: Local path does not exist: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d/artifacts/model.pkl
+2025-11-08 00:35:35 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:35:35 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:35:36 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:35:37 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:35:37 - new_york_house_price - INFO - Trying to load model from: runs:/743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:35:38 - new_york_house_price - ERROR - Error loading model: Not a proper runs:/ URI: runs:/. Runs URIs must be of the form 'runs:/<run_id>/run-relative/path/to/artifact'
+2025-11-08 00:35:38 - new_york_house_price - INFO - Trying alternative path: runs:/743f839a3ac24079aff21bb5e4f6e42d/artifacts
+2025-11-08 00:35:38 - new_york_house_price - ERROR - Error loading from alternative path: Failed to download artifacts from path 'artifacts', please ensure that the path is correct.
+2025-11-08 00:35:38 - new_york_house_price - INFO - Trying local filesystem path: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:35:38 - new_york_house_price - ERROR - Error loading from local path: Local path does not exist: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:35:38 - new_york_house_price - ERROR - Error loading Production model: Could not load model from any path. Errors:
+Primary: Not a proper runs:/ URI: runs:/. Runs URIs must be of the form 'runs:/<run_id>/run-relative/path/to/artifact'
+Alternative: Failed to download artifacts from path 'artifacts', please ensure that the path is correct.
+Local: Local path does not exist: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:35:38 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Could not load model from any path. Errors:
+Primary: Not a proper runs:/ URI: runs:/. Runs URIs must be of the form 'runs:/<run_id>/run-relative/path/to/artifact'
+Alternative: Failed to download artifacts from path 'artifacts', please ensure that the path is correct.
+Local: Local path does not exist: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:40:36 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:40:36 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:40:37 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:40:38 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:40:38 - new_york_house_price - INFO - Trying to load model from: runs:/743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:40:39 - new_york_house_price - ERROR - Error loading model: Not a proper runs:/ URI: runs:/. Runs URIs must be of the form 'runs:/<run_id>/run-relative/path/to/artifact'
+2025-11-08 00:40:39 - new_york_house_price - INFO - Trying alternative path: runs:/743f839a3ac24079aff21bb5e4f6e42d/model
+2025-11-08 00:40:39 - new_york_house_price - ERROR - Error loading from alternative path: Failed to download artifacts from path 'model', please ensure that the path is correct.
+2025-11-08 00:40:39 - new_york_house_price - INFO - Trying local filesystem path: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d/artifacts
+2025-11-08 00:40:39 - new_york_house_price - ERROR - Error loading from local path: Local path does not exist: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d/artifacts
+2025-11-08 00:40:39 - new_york_house_price - ERROR - Error loading Production model: Could not load model from any path. Errors:
+Primary: Not a proper runs:/ URI: runs:/. Runs URIs must be of the form 'runs:/<run_id>/run-relative/path/to/artifact'
+Alternative: Failed to download artifacts from path 'model', please ensure that the path is correct.
+Local: Local path does not exist: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d/artifacts
+2025-11-08 00:40:39 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: Could not load model from any path. Errors:
+Primary: Not a proper runs:/ URI: runs:/. Runs URIs must be of the form 'runs:/<run_id>/run-relative/path/to/artifact'
+Alternative: Failed to download artifacts from path 'model', please ensure that the path is correct.
+Local: Local path does not exist: mlruns/1/models/743f839a3ac24079aff21bb5e4f6e42d/artifacts
+2025-11-08 00:42:21 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:42:21 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:42:22 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:42:23 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:42:23 - new_york_house_price - INFO - Trying to load model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 00:42:24 - new_york_house_price - INFO - Successfully loaded model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 00:42:24 - new_york_house_price - ERROR - Error loading Production model: name 'loaded_model' is not defined
+2025-11-08 00:42:24 - new_york_house_price - ERROR - FATAL ERROR during startup: Failed to load model from registry: name 'loaded_model' is not defined
+2025-11-08 00:43:35 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:43:35 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:43:36 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:43:37 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:43:37 - new_york_house_price - INFO - Trying to load model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 00:43:39 - new_york_house_price - INFO - Successfully loaded model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 00:43:39 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-08 00:43:39 - new_york_house_price - ERROR - FATAL ERROR during startup: 'DataProcessor' object has no attribute 'load_preprocessors'
+2025-11-08 00:45:16 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 00:45:16 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 00:45:17 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 00:45:18 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 00:45:18 - new_york_house_price - INFO - Trying to load model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 00:45:19 - new_york_house_price - INFO - Successfully loaded model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 00:45:19 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-08 00:45:19 - new_york_house_price - INFO - Loading Preprocessor from models/preprocessing
+2025-11-08 00:45:19 - new_york_house_price - INFO - Preprocessor Loaded Successfully
+2025-11-08 00:45:19 - new_york_house_price - INFO - Model (XGB_Regressor_best_model V1) and preprocessor loaded successfully
+2025-11-08 07:57:45 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 07:57:45 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 07:57:46 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 07:57:47 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 07:57:47 - new_york_house_price - INFO - Trying to load model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 07:57:48 - new_york_house_price - INFO - Successfully loaded model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 07:57:48 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-08 07:57:48 - new_york_house_price - INFO - Loading Preprocessor from models/preprocessing
+2025-11-08 07:57:48 - new_york_house_price - INFO - Preprocessor Loaded Successfully
+2025-11-08 07:57:48 - new_york_house_price - INFO - Model (XGB_Regressor_best_model V1) and preprocessor loaded successfully
+2025-11-08 11:05:41 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 11:05:41 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 11:05:44 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 11:05:46 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 11:05:46 - new_york_house_price - INFO - Trying to load model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 11:05:48 - new_york_house_price - INFO - Successfully loaded model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 11:05:48 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-08 11:05:48 - new_york_house_price - INFO - Loading Preprocessor from models/preprocessing
+2025-11-08 11:05:48 - new_york_house_price - INFO - Preprocessor Loaded Successfully
+2025-11-08 11:05:48 - new_york_house_price - INFO - Model (XGB_Regressor_best_model V1) and preprocessor loaded successfully
+2025-11-08 11:06:08 - new_york_house_price - ERROR - Error Transform : 'NoneType' object is not iterable
+2025-11-08 11:06:08 - new_york_house_price - ERROR - Error making prediction: 'NoneType' object is not iterable
+2025-11-08 11:10:09 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 11:10:09 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 11:10:10 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 11:10:12 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 11:10:12 - new_york_house_price - INFO - Trying to load model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 11:10:14 - new_york_house_price - INFO - Successfully loaded model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 11:10:14 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-08 11:10:14 - new_york_house_price - INFO - Loading Preprocessor from models/preprocessing
+2025-11-08 11:10:14 - new_york_house_price - INFO - Preprocessor Loaded Successfully
+2025-11-08 11:10:14 - new_york_house_price - INFO - Model (XGB_Regressor_best_model V1) and preprocessor loaded successfully
+2025-11-08 11:10:46 - new_york_house_price - ERROR - Error Transform : 'NoneType' object is not iterable
+2025-11-08 11:10:46 - new_york_house_price - ERROR - Error making prediction: 'NoneType' object is not iterable
+2025-11-08 11:26:40 - new_york_house_price - ERROR - Error Transform : 'NoneType' object is not iterable
+2025-11-08 11:31:48 - new_york_house_price - ERROR - Error making prediction: 'NoneType' object is not iterable
+2025-11-08 11:31:57 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 11:31:57 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 11:31:58 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 11:31:59 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 11:31:59 - new_york_house_price - INFO - Trying to load model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 11:32:00 - new_york_house_price - INFO - Successfully loaded model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 11:32:00 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-08 11:32:00 - new_york_house_price - INFO - Loading Preprocessor from models/preprocessing
+2025-11-08 11:32:00 - new_york_house_price - INFO - Preprocessor Loaded Successfully
+2025-11-08 11:32:00 - new_york_house_price - INFO - Model (XGB_Regressor_best_model V1) and preprocessor loaded successfully
+2025-11-08 11:32:14 - new_york_house_price - ERROR - Error Transform : 'NoneType' object is not iterable
+2025-11-08 11:32:14 - new_york_house_price - ERROR - Error making prediction: 'NoneType' object is not iterable
+2025-11-08 11:32:16 - new_york_house_price - ERROR - Error Transform : 'NoneType' object is not iterable
+2025-11-08 11:32:16 - new_york_house_price - ERROR - Error making prediction: 'NoneType' object is not iterable
+2025-11-08 11:35:58 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 11:35:58 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 11:35:59 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 11:36:00 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 11:36:00 - new_york_house_price - INFO - Trying to load model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 11:36:00 - new_york_house_price - INFO - Successfully loaded model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 11:36:00 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-08 11:36:00 - new_york_house_price - INFO - Loading Preprocessor from models/preprocessing
+2025-11-08 11:36:00 - new_york_house_price - INFO - Preprocessor Loaded Successfully
+2025-11-08 11:36:00 - new_york_house_price - INFO - Model (XGB_Regressor_best_model V1) and preprocessor loaded successfully
+2025-11-08 11:36:06 - new_york_house_price - ERROR - Error Transform : 'NoneType' object is not iterable
+2025-11-08 11:36:06 - new_york_house_price - ERROR - Error making prediction: 'NoneType' object is not iterable
+2025-11-08 11:36:17 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 11:36:17 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 11:36:17 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 11:36:18 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 11:36:18 - new_york_house_price - INFO - Trying to load model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 11:36:19 - new_york_house_price - INFO - Successfully loaded model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 11:36:19 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-08 11:36:19 - new_york_house_price - INFO - Loading Preprocessor from models/preprocessing
+2025-11-08 11:36:19 - new_york_house_price - INFO - Preprocessor Loaded Successfully
+2025-11-08 11:36:19 - new_york_house_price - INFO - Model (XGB_Regressor_best_model V1) and preprocessor loaded successfully
+2025-11-08 11:36:19 - new_york_house_price - ERROR - Error Transform : 'NoneType' object is not iterable
+2025-11-08 11:36:19 - new_york_house_price - ERROR - Error making prediction: 'NoneType' object is not iterable
+2025-11-08 11:36:36 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 11:36:37 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 11:36:37 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 11:36:38 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 11:36:38 - new_york_house_price - INFO - Trying to load model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 11:36:39 - new_york_house_price - INFO - Successfully loaded model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 11:36:39 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-08 11:36:39 - new_york_house_price - INFO - Loading Preprocessor from models/preprocessing
+2025-11-08 11:36:39 - new_york_house_price - INFO - Preprocessor Loaded Successfully
+2025-11-08 11:36:39 - new_york_house_price - INFO - Model (XGB_Regressor_best_model V1) and preprocessor loaded successfully
+2025-11-08 11:36:39 - new_york_house_price - ERROR - Error making prediction: unsupported format string passed to numpy.ndarray.__format__
+2025-11-08 11:36:51 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 11:36:51 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 11:36:51 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 11:36:52 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 11:36:52 - new_york_house_price - INFO - Trying to load model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 11:36:53 - new_york_house_price - INFO - Successfully loaded model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 11:36:53 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-08 11:36:53 - new_york_house_price - INFO - Loading Preprocessor from models/preprocessing
+2025-11-08 11:36:53 - new_york_house_price - INFO - Preprocessor Loaded Successfully
+2025-11-08 11:36:53 - new_york_house_price - INFO - Model (XGB_Regressor_best_model V1) and preprocessor loaded successfully
+2025-11-08 11:36:53 - new_york_house_price - INFO - Prediction complete. Estimated Price: $1745437.75
+2025-11-08 11:37:22 - new_york_house_price - INFO - Loading configuration from config/config.yaml
+2025-11-08 11:37:22 - new_york_house_price - INFO - Configuration loaded sucessfully
+2025-11-08 11:37:22 - new_york_house_price - INFO - Loading production model from MLflow Registry.
+2025-11-08 11:37:23 - new_york_house_price - INFO - Loading Production Model XGB_Regressor_best_model V1 from Run ID: 743f839a3ac24079aff21bb5e4f6e42d
+2025-11-08 11:37:23 - new_york_house_price - INFO - Trying to load model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 11:37:24 - new_york_house_price - INFO - Successfully loaded model from: models:/XGB_Regressor_best_model/Production
+2025-11-08 11:37:24 - new_york_house_price - INFO - Initialized DataProcessor
+2025-11-08 11:37:24 - new_york_house_price - INFO - Loading Preprocessor from models/preprocessing
+2025-11-08 11:37:24 - new_york_house_price - INFO - Preprocessor Loaded Successfully
+2025-11-08 11:37:24 - new_york_house_price - INFO - Model (XGB_Regressor_best_model V1) and preprocessor loaded successfully

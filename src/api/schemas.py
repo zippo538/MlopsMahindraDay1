@@ -20,6 +20,7 @@ class ModelInfo(BaseModel):
 # --- Skema Input Prediksi ---
 class HousePredictionRequest(BaseModel):
     """Input data required for making a house price prediction."""
+    PRICE : int = Field(..., description="Price of House") 
     BEDS: int = Field(..., description="Number of bedrooms.")
     BATH: int = Field(..., description="Number of bathrooms.")
     PROPERTYSQFT: int = Field(..., description="Property square footage.")
@@ -31,11 +32,12 @@ class HousePredictionRequest(BaseModel):
         # Contoh data untuk dokumentasi Swagger/Redoc
         schema_extra = {
             "example": {
+                "PRICE" : 200000,
                 "BEDS": 3,
                 "BATH": 2,
                 "PROPERTYSQFT": 1500,
-                'LATITUDE' : 40.761255 ,
-                'LONGITUDE': -73.9744834,
+                "LATITUDE" : 40.761255 ,
+                "LONGITUDE": -73.9744834,
                 "LOCALITY": "Brooklyn"
             }
         }

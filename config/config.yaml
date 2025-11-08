@@ -18,6 +18,8 @@ ALL_METRICS_PATH: "artifacts/all_metrics.json"
 BEST_ESTIMATOR_PATH: "artifacts/best_estimators.json"
 preprocessing_path: "models/preprocessing"
 
+
+FEATURE_COLUMN : ['PRICE', 'BEDS', 'LATITUDE', 'LONGITUDE', 'BATH', 'PROPERTYSQFT', 'LOCALITY']
 # Scale Columns Transformer
 columns_tranformer : 
   SCALE : ['PROPERTYSQFT', 'LATITUDE', 'LONGITUDE', 'BATH', 'BEDS']

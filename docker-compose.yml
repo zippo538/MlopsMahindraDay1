@@ -1,0 +1,30 @@
+version: '3.8'
+
+# Definisi satu atau lebih layanan (containers) untuk aplikasi Anda
+services:
+  mlopsday1-fastapi:
+    # Menginstruksikan Docker Compose untuk membangun image menggunakan 
+    # Dockerfile yang ada di direktori saat ini (.).
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    
+    # Memetakan port: HOST_PORT:CONTAINER_PORT
+    # Ini memungkinkan Anda mengakses aplikasi di localhost:8000
+    ports:
+      - "8000:8000"
+    
+    # (Opsional) Menggunakan volume untuk pengembangan (Development/Hot Reload)
+    # Ini memungkinkan perubahan kode di host segera terlihat di kontainer, 
+    # karena Anda menggunakan "--reload" di CMD.
+    # Hapus baris 'volumes' di bawah jika Anda hanya ingin menjalankan produksi (Production).
+    volumes:
+      - .:/app
+    
+    # Perintah yang dijalankan saat kontainer dimulai
+    # Ini sama dengan CMD di Dockerfile, tetapi didefinisikan ulang di compose untuk kejelasan.
+    # Jika volume diaktifkan, ini memastikan uvicorn dapat memuat ulang kode.
+    command: ["sh", "-c", "python src/run_pipeline.py && uvicorn..."]
+
+    # Mengatur restart otomatis jika layanan gagal atau dihentikan
+    restart: unless-stopped

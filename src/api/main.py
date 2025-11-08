@@ -173,15 +173,10 @@ async def predict(request: HousePredictionRequest):
     try:
         # 1. Konversi request Pydantic menjadi DataFrame 1 baris
         # Gunakan list di sekitar request.dict() agar menjadi DataFrame 1 baris (2D container)
-        data = pd.DataFrame([request.dict()]) 
+        data = pd.DataFrame([request.dict()])[config.get('FEATURE_COLUMN')] 
         
-        # 2. Preprocess data (menggunakan method DataProcessor.transform)
-        # Transformasi ini harus menghasilkan data yang siap diinput ke Pipeline Model
-        processed_data = preprocessor.transform(data) 
         
-        # 3. Make prediction (menggunakan .predict() karena ini regresi)
-        # processed_data sudah dipastikan 2D container
-        estimated_price = model.predict(processed_data)[0]
+        estimated_price = model.predict(data)[0]
         
         response = HousePredictionResponse(
             estimated_price=float(estimated_price),

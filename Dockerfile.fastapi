@@ -20,15 +20,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # 4. (Opsional) Paparkan port jika aplikasi Anda adalah API/layanan inferensi
-# Ganti 8000 dengan port yang digunakan oleh aplikasi Anda (misalnya Flask/FastAPI)
-# EXPOSE 8000 
+# EXPOSE 8000
 
 # 5. Tentukan perintah yang akan dijalankan saat kontainer dimulai
-# Ganti 'python main.py' dengan perintah yang sesuai untuk menjalankan 
-# alur kerja MLOps atau server API Anda.
 
-# Contoh untuk menjalankan skrip utama:
-# CMD ["python", "train.py"] 
 
-# Contoh untuk menjalankan server FastAPI/Uvicorn (jika proyek Anda adalah deployment API):
-# CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+# Start FastAPI
+CMD ["sh", "-c", "python src/run_pipeline.py && uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --reload"]
